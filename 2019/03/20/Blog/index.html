@@ -14,10 +14,13 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="title:使用Hexo框架搭建博客(Archlinux)Hexo官网 搭建框架 进入准备放置博客文件的文件夹 $ npm install hexo-cli -g $ hexo init blog $ cd blog $ npm install $ hexo server  写作$ hexo new [layout] &amp;lt;title&amp;gt; 完成后部署可执行下列的其中一个命令，让 Hexo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-20T12:32:43.655Z">
+<meta property="og:image" content="https://lovezhaozhen.github.io.git/2019/03/20/Blog/Blog/URL.png">
+<meta property="og:image" content="https://lovezhaozhen.github.io.git/2019/03/20/Blog/Blog/Deployment.png">
+<meta property="og:updated_time" content="2019-03-20T13:55:31.881Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZhaoZhen&#39;s Blog">
 <meta name="twitter:description" content="title:使用Hexo框架搭建博客(Archlinux)Hexo官网 搭建框架 进入准备放置博客文件的文件夹 $ npm install hexo-cli -g $ hexo init blog $ cd blog $ npm install $ hexo server  写作$ hexo new [layout] &amp;lt;title&amp;gt; 完成后部署可执行下列的其中一个命令，让 Hexo">
+<meta name="twitter:image" content="https://lovezhaozhen.github.io.git/2019/03/20/Blog/Blog/URL.png">
   
     <link rel="alternate" href="/atom.xml" title="ZhaoZhen&#39;s Blog" type="application/atom+xml">
   
@@ -67,7 +70,7 @@
         <section id="main"><article id="post-Blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/20/Blog/" class="article-date">
-  <time datetime="2019-03-20T12:32:43.655Z" itemprop="datePublished">2019-03-20</time>
+  <time datetime="2019-03-20T13:55:31.881Z" itemprop="datePublished">2019-03-20</time>
 </a>
     
   </div>
@@ -100,7 +103,12 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name  &quot;Zhao Zhen&quot;</span><br><span class="line">$ git config --global user.email &quot;lovezhaozhen@gmail.com&quot;</span><br></pre></td></tr></table></figure>
 <p>  查看git设置 <code>git config --list</code></p>
 </li>
-<li></li>
+<li>安装openssh<br>  <code>sudo pacman -S openssh</code></li>
+<li>生成SSH秘钥<br>  <code>ssh-keygen -t rsa -b 4096 -C &quot;lovezhaozhen@gmail.com&quot;</code></li>
+<li>打开 ～.ssh/id_rsa.pub 复制全部内容<br>粘贴在github上 settings -&gt; SSH and GPG keys -&gt;New SSH key </li>
+<li>配置 _config.yml <img src="Blog/URL.png" alt="修改url" title="修改url"><br>  <img src="Blog/Deployment.png" alt="修改Deployment" title="修改Deployment"><br>  repo获取方法：<a href="Blog/repo.png" title="复制URL">github</a></li>
+<li>安装deployer插件<br>  <code>$ npm install hexo-deployer-git --save</code></li>
+<li>部署 <code>hexo g</code> <code>hexo d(hexo deploy)</code>    </li>
 </ul>
 </li>
 </ol>
@@ -110,7 +118,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loveZhaoZhen.github.io.git/2019/03/20/Blog/" data-id="cjth8azj70000b6ce0kk144nj" class="article-share-link">Share</a>
+      <a data-url="https://loveZhaoZhen.github.io.git/2019/03/20/Blog/" data-id="cjth9rswi00006icektn07vcy" class="article-share-link">Share</a>
       
       
     </footer>
