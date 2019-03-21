@@ -393,7 +393,7 @@
                 
               
 
-              <time title="Created: 2019-03-21 13:47:44 / Modified: 21:07:22" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
+              <time title="Created: 2019-03-21 13:47:44 / Modified: 21:13:50" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
             
 
             
@@ -462,68 +462,21 @@
 
       
         
-          
-            <h2 id="使用NexT主题"><a href="#使用NexT主题" class="headerlink" title="使用NexT主题"></a>使用NexT主题</h2><ul>
+          <h2 id="使用NexT主题"><a href="#使用NexT主题" class="headerlink" title="使用NexT主题"></a>使用NexT主题</h2><ul>
 <li>进入themes目录<br><code>git clone https://github.com/theme-next/hexo-theme-next.git next/</code></li>
-<li>设置主题<br>打开配置文件_config.yml<br>找到theme修改为：<br><code>themes: next</code><h2 id="配置Next主题"><a href="#配置Next主题" class="headerlink" title="配置Next主题"></a>配置Next主题</h2><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">官方配置文档</a>  </li>
-</ul>
-<h3 id="配置-themes-next-config-yml文件"><a href="#配置-themes-next-config-yml文件" class="headerlink" title="配置/themes/next/_config.yml文件"></a>配置<code>/themes/next/_config.yml</code>文件</h3><h4 id="修改网站底部信息"><a href="#修改网站底部信息" class="headerlink" title="修改网站底部信息"></a>修改网站底部信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">    since: 2019（建站时间）</span><br><span class="line">    copyright:</span><br><span class="line">    powered: false (不显示hexo授权图片)</span><br><span class="line">    theme: （不显示网站Next主题信息）</span><br><span class="line">        enable: false</span><br></pre></td></tr></table></figure>
-<h4 id="菜单栏menu"><a href="#菜单栏menu" class="headerlink" title="菜单栏menu"></a>菜单栏menu</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  #about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br></pre></td></tr></table></figure>
-<h4 id="主题风格"><a href="#主题风格" class="headerlink" title="主题风格"></a>主题风格</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-<p>这里选择<code>Pisces</code></p>
-<h4 id="个人社交信息"><a href="#个人社交信息" class="headerlink" title="个人社交信息"></a>个人社交信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  E-Mail: love.zhaozhen@gmail.com || envelope</span><br></pre></td></tr></table></figure>
-<h4 id="网站头像"><a href="#网站头像" class="headerlink" title="网站头像"></a>网站头像</h4><p><code>avatar:</code></p>
-<h4 id="网站动画效果"><a href="#网站动画效果" class="headerlink" title="网站动画效果"></a>网站动画效果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: true</span><br></pre></td></tr></table></figure>
-<p>选择一个动画效果，不止有如下选择，但只能同时选择一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">canvas_nest: true</span><br><span class="line">three_waves: false</span><br><span class="line">canvas_lines: false</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure></p>
-<p>需要<strong>Download</strong>js文件<br>进入next主题目录中<em>source/lib</em> direcotry</p>
-<p><code>git clone https://github.com/theme-next/theme-next-canvas-nest canvas-nest</code><br><strong>Update</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/next/source/lib/canvas-nest</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
-<h4 id="复制代码按钮"><a href="#复制代码按钮" class="headerlink" title="复制代码按钮"></a>复制代码按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  border_radius:</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: false</span><br><span class="line">    show_result: false</span><br></pre></td></tr></table></figure>
-<h4 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h4><ul>
-<li>安装站内搜索插件<br>在blog根目录下<br><code>npm install hexo-generator-searchdb --save</code><br><br></li>
-<li><p>在blog根目录<code>_config.yml</code>中添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>/themes/next/_config.yml</code>中搜索<code>local_search</code>并做如下修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: true</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h4><p>在<code>themes/next/_config.yml</code>中搜索<code>reward</code><br>支持微信(wechatpay)，支付宝(alipay)，比特币(bitcoin)</p>
-<h3 id="用LeanCloud增加Blog文章访问量功能"><a href="#用LeanCloud增加Blog文章访问量功能" class="headerlink" title="用LeanCloud增加Blog文章访问量功能"></a>用LeanCloud增加Blog文章访问量功能</h3><p>-　注册leancloud <a href="https://leancloud.cn/" target="_blank" rel="noopener">Leancloud官网</a></p>
-<ul>
-<li>进入控制台，创建应用（名称随意，可以更改）</li>
-<li>点击应用右上角的齿轮图标（设置） –&gt;存储 –&gt;创建class (此处<code>class name 必须是</code> <code>Counter</code>)，权限可设为所有用户</li>
-<li>在安全中心添加Web安全域名, 如<code>https://lovezhaozhen.github.io/</code></li>
-<li>找到 应用key 复制AppID 与 AppKey</li>
-<li><p>打开<code>next</code>的配置文件<code>themes/next/_config.yml</code><br>  找到</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">    enable: true</span><br><span class="line">    app_id: </span><br><span class="line">    app_key: </span><br><span class="line">    security: true</span><br><span class="line">    betterPerformance: false</span><br></pre></td></tr></table></figure>
-<p>  对应填上刚复制的AppID 与 AppKey</p>
-</li>
-<li><p>打开blog配置文件<code>_config.yml</code></p>
-<pre><code>在最后添加如下代码
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line">    enable_sync: true</span><br><span class="line">    app_id: lMLdjNReIMxWXUbCfFcApNGb-gzGzoHsz</span><br><span class="line">    app_key: GUCncs6ewY1f8yfwy92yNQ0J</span><br><span class="line">    username: &lt;&lt;username&gt;&gt; </span><br><span class="line">    password: &lt;&lt;password&gt;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装<code>hexo-leancloud-counter-security</code>插件<br>  在blog文件<strong>根目录</strong>下输入  </p>
-<pre><code>`npm install hexo-leancloud-counter-security --save`  
-相同路径下输入  
-`hexo lc-counter register username password`(username password 随便输，不需要是leancloud的用户名密码)
-</code></pre></li>
-<li><p>打开blog配置文件<code>_config.yml</code>  </p>
-<ul>
-<li>将之前添加的 <code>&lt;&lt;username&gt;&gt;和&lt;&lt;password&gt;&gt;</code>替换为 刚设置的用户名密码(密码是纯数字需要加上双引号（表明是字符串），此用户名和密码将在hexo部署时使用。</li>
-<li>在deploy下增加<code>type:              leancloud_counter_security_sync</code><br>  如下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">repo: git@github.com:loveZhaoZhen/loveZhaoZhen.github.io.git</span><br><span class="line">branch: master</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>进一步设置权限<br>  进入<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud网站</a><br>  设置class <em>Counter</em>的权限，将<em>add_fields</em>,<em>create</em>,<em>delete</em>权限都设为指定用户(在<strong>用户</strong>中输入之前设置的<em>username</em>之后点击添加即可)</p>
-</li>
-</ul>
-<p>可在浏览器点击右键点击<strong>Inspect</strong>查看是否有bug<br><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">另附详转载细配置教程</a>（内含leancloud权限详细配置）</p>
-<h3 id="为博客增加评论功能"><a href="#为博客增加评论功能" class="headerlink" title="为博客增加评论功能"></a>为博客增加评论功能</h3><p><a href="http://theme-next.iissnan.com/third-party-services.html#comment-system" target="_blank" rel="noopener">详见官网</a></p>
-
+<li>设置主题<br>打开配置文件_config.yml<br>找到theme修改为：<br><code>themes: next</code>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/21/BlogSetting/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
 
     
 
@@ -620,12 +573,24 @@
                 
               
 
-              <time title="Created: 2019-03-20 22:50:20 / Modified: 23:07:04" itemprop="dateCreated datePublished" datetime="2019-03-20T22:50:20+08:00">2019-03-20</time>
+              <time title="Created: 2019-03-20 22:50:20" itemprop="dateCreated datePublished" datetime="2019-03-20T22:50:20+08:00">2019-03-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-21 21:13:53" itemprop="dateModified" datetime="2019-03-21T21:13:53+08:00">2019-03-21</time>
               
             
           </span>
@@ -671,16 +636,21 @@
 
       
         
-          
-            <ol>
+          <ol>
 <li>默认进入纯英文环境<br>在 ～/.zshrc 中加入 export LANG=C</li>
-<li>设置透明<br><img src="linuxCommands/transparency.png" alt="transparency"></li>
-</ol>
-
+<li>设置透明<br><img src="linuxCommands/transparency.png" alt="transparency">
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/20/konsoleSetting/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
-    </div>
+    </li></ol></div>
 
     
 
@@ -955,7 +925,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-21 20:26:31" itemprop="dateModified" datetime="2019-03-21T20:26:31+08:00">2019-03-21</time>
+                <time title="Modified: 2019-03-21 21:13:52" itemprop="dateModified" datetime="2019-03-21T21:13:52+08:00">2019-03-21</time>
               
             
           </span>
@@ -1019,55 +989,26 @@
 
       
         
-          
-            <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a></p>
+          <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a></p>
 <h2 id="搭建框架"><a href="#搭建框架" class="headerlink" title="搭建框架"></a>搭建框架</h2><ul>
 <li>进入准备放置博客文件的文件夹</li>
 <li>$ npm install hexo-cli -g</li>
 <li>$ hexo init blog</li>
 <li>$ cd blog</li>
 <li>$ npm install</li>
-<li>$ hexo server</li>
-</ul>
-<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p><code>$ hexo new [layout] &lt;title&gt;</code></p>
-<h2 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h2><p><code>npm install hexo-server --save</code><br>安装完成后，输入以下命令以启动服务器，您的网站会在 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 下启动。在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。</p>
-<p>启动服务器<br><code>$ hexo server</code></p>
-<p>可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br><span class="line">上面两个命令可以简写为</span><br><span class="line">$ hexo g -d</span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure></p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
-<li><h3 id="将博客部署到Github"><a href="#将博客部署到Github" class="headerlink" title="将博客部署到Github"></a>将博客部署到Github</h3></li>
-</ul>
-<ol>
-<li>在github上新建 repository 名字必须是 <code>username.github.io</code> 如 <code>loveZhaoZhen.github.io</code></li>
-<li><p>githubSHH配置<br><a href="https://help.github.com/en/articles/connecting-to-github-with-ssh" target="_blank" rel="noopener">githubSSH官方文档</a></p>
-<ul>
-<li>安装git<br>  <code>sudo pacman -S git</code></li>
-<li><p>需要设置好姓名和邮箱之后才能开始使用 Git</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name  &quot;Zhao Zhen&quot;</span><br><span class="line">$ git config --global user.email &quot;lovezhaozhen@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-<p>  查看git设置 <code>git config --list</code></p>
-</li>
-<li>安装openssh<br>  <code>sudo pacman -S openssh</code></li>
-<li>生成SSH秘钥<br>  <code>ssh-keygen -t rsa -b 4096 -C &quot;lovezhaozhen@gmail.com&quot;</code></li>
-<li>打开 ～.ssh/id_rsa.pub 复制全部内容<br>粘贴在github上 settings -&gt; SSH and GPG keys -&gt;New SSH key </li>
-<li><p>测试SSH设置是否成功<br><code>$ ssh -T git@GitHub.com</code><br>output如下即可算是正常<br><code>Hi &lt;&lt;username&gt;&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
-</li>
-<li><p>配置 _config.yml </p>
-<ul>
-<li>修改url<br>  url: <a href="https://loveZhaoZhen.github.io">https://loveZhaoZhen.github.io</a><br>  <img src="Blog/URL.png" alt="修改url" title="修改url"></li>
-<li>修改deploy<br>  <img src="Blog/Deployment.png" alt="修改Deployment" title="修改Deployment"><br>  type: git<br>  repo:          <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:loveZhaoZhen/loveZhaoZhen.github.io.git<br>  branch: master</li>
-</ul>
-</li>
-<li>安装deployer插件<br>  <code>$ npm install hexo-deployer-git --save</code></li>
-<li>部署<br><code>hexo g</code> <code>hexo d(hexo deploy)</code><br><code>(hexo g -d)</code></li>
-</ul>
-</li>
-</ol>
-<h3 id="文章资源文件夹"><a href="#文章资源文件夹" class="headerlink" title="文章资源文件夹"></a>文章资源文件夹</h3><p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 config.yml 文件中的 post_asset_folder 选项设为 true 来打开。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure></p>
-<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 hexo new [layout] <title> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</title></p>
-
+<li>$ hexo server
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/20/Blog/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
 
     
 
@@ -1316,12 +1257,16 @@
                 <div class="site-state-item site-state-categories">
                   
                     
+                      <a href="/categories/">
+                    
+                  
+                    
                     
                       
                     
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">categories</span>
-                  
+                  </a>
                 </div>
               
 
