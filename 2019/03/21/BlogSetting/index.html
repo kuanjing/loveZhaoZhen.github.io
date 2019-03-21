@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next配置Next主题官方配置文档    配置/themes/next/_config.yml文件修改网站底部信息123456footer:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T11:29:39.454Z">
+<meta property="og:updated_time" content="2019-03-21T11:38:14.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客配置">
 <meta name="twitter:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next配置Next主题官方配置文档    配置/themes/next/_config.yml文件修改网站底部信息123456footer:">
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="Created: 2019-03-21 13:47:44 / Modified: 19:29:39" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
+              <time title="Created: 2019-03-21 13:47:44 / Modified: 19:38:14" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
             
 
             
@@ -464,11 +464,14 @@
 相同路径下输入  
 `hexo lc-counter register username password`(username password 随便输，不需要是leancloud的用户名密码)
 </code></pre></li>
-<li>打开blog配置文件<code>_config.yml</code>  <ul>
+<li><p>打开blog配置文件<code>_config.yml</code>  </p>
+<ul>
 <li>将之前添加的 <code>&lt;&lt;username&gt;&gt;和&lt;&lt;password&gt;&gt;</code>替换为 刚设置的用户名密码(密码是纯数字需要加上双引号（表明是字符串），此用户名和密码将在hexo部署时使用。</li>
 <li>在deploy下增加<code>type:              leancloud_counter_security_sync</code><br>  如下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">repo: git@github.com:loveZhaoZhen/loveZhaoZhen.github.io.git</span><br><span class="line">branch: master</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+</li>
+<li><p>进一步设置权限<br>  进入<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud网站</a><br>  设置class <em>Counter</em>的权限，将<em>add_fields</em>,<em>create</em>,<em>delete</em>权限都设为指定用户(在<strong>用户</strong>中输入之前设置的<em>username</em>之后点击添加即可)</p>
 </li>
 </ul>
 <p>可在浏览器点击右键点击<strong>Inspect</strong>查看是否有bug<br><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">另附详转载细配置教程</a>（内含leancloud权限详细配置）</p>
