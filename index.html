@@ -393,7 +393,7 @@
                 
               
 
-              <time title="Created: 2019-03-21 13:47:44 / Modified: 20:58:20" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
+              <time title="Created: 2019-03-21 13:47:44 / Modified: 21:07:22" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
             
 
             
@@ -477,16 +477,17 @@
 <p>选择一个动画效果，不止有如下选择，但只能同时选择一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">canvas_nest: true</span><br><span class="line">three_waves: false</span><br><span class="line">canvas_lines: false</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure></p>
 <p>需要<strong>Download</strong>js文件<br>进入next主题目录中<em>source/lib</em> direcotry</p>
 <p><code>git clone https://github.com/theme-next/theme-next-canvas-nest canvas-nest</code><br><strong>Update</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/next/source/lib/canvas-nest</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
-<h4 id="复制代码按钮"><a href="#复制代码按钮" class="headerlink" title="复制代码按钮"></a>复制代码按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  border_radius:</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: true</span><br><span class="line">    show_result: false</span><br></pre></td></tr></table></figure>
+<h4 id="复制代码按钮"><a href="#复制代码按钮" class="headerlink" title="复制代码按钮"></a>复制代码按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  border_radius:</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: false</span><br><span class="line">    show_result: false</span><br></pre></td></tr></table></figure>
 <h4 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h4><ul>
 <li>安装站内搜索插件<br>在blog根目录下<br><code>npm install hexo-generator-searchdb --save</code><br><br></li>
 <li><p>在blog根目录<code>_config.yml</code>中添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在<code>/themes/next/_config.yml</code>中找到<code>local_search</code>并做如下修改</p>
+<li><p>在<code>/themes/next/_config.yml</code>中搜索<code>local_search</code>并做如下修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: true</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h4 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h4><p>在<code>themes/next/_config.yml</code>中搜索<code>reward</code><br>支持微信(wechatpay)，支付宝(alipay)，比特币(bitcoin)</p>
 <h3 id="用LeanCloud增加Blog文章访问量功能"><a href="#用LeanCloud增加Blog文章访问量功能" class="headerlink" title="用LeanCloud增加Blog文章访问量功能"></a>用LeanCloud增加Blog文章访问量功能</h3><p>-　注册leancloud <a href="https://leancloud.cn/" target="_blank" rel="noopener">Leancloud官网</a></p>
 <ul>
 <li>进入控制台，创建应用（名称随意，可以更改）</li>
@@ -1940,38 +1941,6 @@
   
 
   
-<script>
-  $('.highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('Copy');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
 
   
 
