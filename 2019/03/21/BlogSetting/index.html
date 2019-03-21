@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next配置Next主题官方配置文档    配置/themes/next/_config.yml文件修改网站底部信息123456footer:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T12:51:58.100Z">
+<meta property="og:updated_time" content="2019-03-21T12:58:20.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客配置">
 <meta name="twitter:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next配置Next主题官方配置文档    配置/themes/next/_config.yml文件修改网站底部信息123456footer:">
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="Created: 2019-03-21 13:47:44 / Modified: 20:51:58" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
+              <time title="Created: 2019-03-21 13:47:44 / Modified: 20:58:20" itemprop="dateCreated datePublished" datetime="2019-03-21T13:47:44+08:00">2019-03-21</time>
             
 
             
@@ -477,10 +477,15 @@
 <p>需要<strong>Download</strong>js文件<br>进入next主题目录中<em>source/lib</em> direcotry</p>
 <p><code>git clone https://github.com/theme-next/theme-next-canvas-nest canvas-nest</code><br><strong>Update</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/next/source/lib/canvas-nest</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
 <h4 id="复制代码按钮"><a href="#复制代码按钮" class="headerlink" title="复制代码按钮"></a>复制代码按钮</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  border_radius:</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: true</span><br><span class="line">    show_result: false</span><br></pre></td></tr></table></figure>
-<h4 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h4><p>local_search:<br>  enable: true</p>
-<h1 id="If-auto-trigger-search-by-changing-input"><a href="#If-auto-trigger-search-by-changing-input" class="headerlink" title="If auto, trigger search by changing input."></a>If auto, trigger search by changing input.</h1><h1 id="If-manual-trigger-search-by-pressing-enter-key-or-search-button"><a href="#If-manual-trigger-search-by-pressing-enter-key-or-search-button" class="headerlink" title="If manual, trigger search by pressing enter key or search button."></a>If manual, trigger search by pressing enter key or search button.</h1><p>  trigger: auto</p>
-<h1 id="Show-top-n-results-per-article-show-all-results-by-setting-to-1"><a href="#Show-top-n-results-per-article-show-all-results-by-setting-to-1" class="headerlink" title="Show top n results per article, show all results by setting to -1"></a>Show top n results per article, show all results by setting to -1</h1><p>  top_n_per_article: 1</p>
-<h1 id="Unescape-html-strings-to-the-readable-one"><a href="#Unescape-html-strings-to-the-readable-one" class="headerlink" title="Unescape html strings to the readable one."></a>Unescape html strings to the readable one.</h1><p>  unescape: true</p>
+<h4 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h4><ul>
+<li>安装站内搜索插件<br>在blog根目录下<br><code>npm install hexo-generator-searchdb --save</code><br><br></li>
+<li><p>在blog根目录<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>/themes/next/_config.yml</code>中找到<code>local_search</code>并做如下修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="用LeanCloud增加Blog文章访问量功能"><a href="#用LeanCloud增加Blog文章访问量功能" class="headerlink" title="用LeanCloud增加Blog文章访问量功能"></a>用LeanCloud增加Blog文章访问量功能</h3><p>-　注册leancloud <a href="https://leancloud.cn/" target="_blank" rel="noopener">Leancloud官网</a></p>
 <ul>
 <li>进入控制台，创建应用（名称随意，可以更改）</li>
@@ -689,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用NexT主题"><span class="nav-number">1.</span> <span class="nav-text">使用NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next主题"><span class="nav-number">2.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-themes-next-config-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">配置/themes/next/_config.yml文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网站底部信息"><span class="nav-number">2.1.1.</span> <span class="nav-text">修改网站底部信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏menu"><span class="nav-number">2.1.2.</span> <span class="nav-text">菜单栏menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题风格"><span class="nav-number">2.1.3.</span> <span class="nav-text">主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人社交信息"><span class="nav-number">2.1.4.</span> <span class="nav-text">个人社交信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站头像"><span class="nav-number">2.1.5.</span> <span class="nav-text">网站头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站动画效果"><span class="nav-number">2.1.6.</span> <span class="nav-text">网站动画效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制代码按钮"><span class="nav-number">2.1.7.</span> <span class="nav-text">复制代码按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站内搜索"><span class="nav-number">2.1.8.</span> <span class="nav-text">站内搜索</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#If-auto-trigger-search-by-changing-input"><span class="nav-number"></span> <span class="nav-text">If auto, trigger search by changing input.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#If-manual-trigger-search-by-pressing-enter-key-or-search-button"><span class="nav-number"></span> <span class="nav-text">If manual, trigger search by pressing enter key or search button.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Show-top-n-results-per-article-show-all-results-by-setting-to-1"><span class="nav-number"></span> <span class="nav-text">Show top n results per article, show all results by setting to -1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unescape-html-strings-to-the-readable-one"><span class="nav-number"></span> <span class="nav-text">Unescape html strings to the readable one.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用LeanCloud增加Blog文章访问量功能"><span class="nav-number">0.1.</span> <span class="nav-text">用LeanCloud增加Blog文章访问量功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为博客增加评论功能"><span class="nav-number">0.2.</span> <span class="nav-text">为博客增加评论功能</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用NexT主题"><span class="nav-number">1.</span> <span class="nav-text">使用NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next主题"><span class="nav-number">2.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-themes-next-config-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">配置/themes/next/_config.yml文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网站底部信息"><span class="nav-number">2.1.1.</span> <span class="nav-text">修改网站底部信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏menu"><span class="nav-number">2.1.2.</span> <span class="nav-text">菜单栏menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题风格"><span class="nav-number">2.1.3.</span> <span class="nav-text">主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人社交信息"><span class="nav-number">2.1.4.</span> <span class="nav-text">个人社交信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站头像"><span class="nav-number">2.1.5.</span> <span class="nav-text">网站头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站动画效果"><span class="nav-number">2.1.6.</span> <span class="nav-text">网站动画效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制代码按钮"><span class="nav-number">2.1.7.</span> <span class="nav-text">复制代码按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站内搜索"><span class="nav-number">2.1.8.</span> <span class="nav-text">站内搜索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用LeanCloud增加Blog文章访问量功能"><span class="nav-number">2.2.</span> <span class="nav-text">用LeanCloud增加Blog文章访问量功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为博客增加评论功能"><span class="nav-number">2.3.</span> <span class="nav-text">为博客增加评论功能</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1291,9 +1296,6 @@
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
       var result = document.execCommand('copy');
-      
-        if (result) $(this).text('Copied');
-        else $(this).text('Copy failed');
       
       ta.blur(); // For iOS
       $(this).blur();
