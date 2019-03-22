@@ -13,7 +13,7 @@
   <entry>
     <title><![CDATA[live2D]]></title>
     <url>%2F2019%2F03%2F22%2Flive2D%2F</url>
-    <content type="text"><![CDATA[var message_Path = '/live2d/' var home_Path = 'https://lovezhaozhen.github.io/' loadlive2d("live2d", "/xiaoMai/13.json");]]></content>
+    <content type="text"><![CDATA[var message_Path = 'xiaoMai' var home_Path = 'https://lovezhaozhen.github.io/' loadlive2d("live2d", "xiaoMai/13.json");]]></content>
   </entry>
   <entry>
     <title><![CDATA[博客配置]]></title>
