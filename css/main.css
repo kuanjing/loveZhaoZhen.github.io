@@ -1843,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3cfff6;
+  background: #f611ff;
 }
 .links-of-blogroll {
   margin-top: 10px;
@@ -2870,5 +2870,5 @@ pre {
   display: block;
 }
 .post-toc ol {
-  font-size: 40px;
+  font-size: 12px;
 }
