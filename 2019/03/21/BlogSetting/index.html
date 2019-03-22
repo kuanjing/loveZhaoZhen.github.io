@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-22T11:42:21.414Z">
+<meta property="og:updated_time" content="2019-03-22T12:02:02.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客配置">
 <meta name="twitter:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next">
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-22 19:42:21" itemprop="dateModified" datetime="2019-03-22T19:42:21+08:00">2019-03-22</time>
+                <time title="Modified: 2019-03-22 20:02:02" itemprop="dateModified" datetime="2019-03-22T20:02:02+08:00">2019-03-22</time>
               
             
           </span>
@@ -550,6 +550,11 @@
 </ul>
 <p>可在浏览器点击右键点击<strong>Inspect</strong>查看是否有bug<br><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">另附详转载细配置教程</a>（内含leancloud权限详细配置）</p>
 <h3 id="为博客增加评论功能"><a href="#为博客增加评论功能" class="headerlink" title="为博客增加评论功能"></a>为博客增加评论功能</h3><p>这里选择livere<br><a href="http://theme-next.iissnan.com/third-party-services.html#comment-system" target="_blank" rel="noopener">详见官网</a></p>
+<h3 id="在右上角或者左上角实现fork-me-on-github"><a href="#在右上角或者左上角实现fork-me-on-github" class="headerlink" title="在右上角或者左上角实现fork me on github"></a>在右上角或者左上角实现fork me on github</h3><ul>
+<li>打开链接选择样式，复制该样式代码<br><a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">样式1</a><br><a href="https://github.blog/2008-12-19-github-ribbons/" target="_blank" rel="noopener">样式2</a></li>
+<li>然后粘贴刚才复制的代码到<code>themes/next/layout/_layout.swig</code>文件中(放在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>的下面)</li>
+<li>把href改为你的github地址<br>如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;&#123;&#123; container_class &#125;&#125; &#123;% block page_class %&#125;&#123;% endblock %&#125;&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;https://github.com/loveZhaoZhen&quot; (修改此处)</span><br><span class="line">class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;</span><br><span class="line">......</span><br><span class="line">.octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;header id=&quot;header&quot; class=&quot;header&quot; itemscope itemtype=&quot;http://schema.org/WPHeader&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;header-inner&quot;&gt;&#123;% include &apos;_partials/header/index.swig&apos; %&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -568,6 +573,17 @@
     
 
     
+
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束-------------</div>
+    
+</div>
+
+    
+    </div>
 
     <footer class="post-footer">
       
@@ -779,7 +795,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用NexT主题"><span class="nav-number">1.</span> <span class="nav-text">使用NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next主题"><span class="nav-number">2.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-themes-next-config-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">配置/themes/next/_config.yml文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网站底部信息"><span class="nav-number">2.1.1.</span> <span class="nav-text">修改网站底部信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏menu"><span class="nav-number">2.1.2.</span> <span class="nav-text">菜单栏menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题风格"><span class="nav-number">2.1.3.</span> <span class="nav-text">主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人社交信息"><span class="nav-number">2.1.4.</span> <span class="nav-text">个人社交信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站头像"><span class="nav-number">2.1.5.</span> <span class="nav-text">网站头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站动画效果"><span class="nav-number">2.1.6.</span> <span class="nav-text">网站动画效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制代码按钮"><span class="nav-number">2.1.7.</span> <span class="nav-text">复制代码按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站内搜索"><span class="nav-number">2.1.8.</span> <span class="nav-text">站内搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打赏功能"><span class="nav-number">2.1.9.</span> <span class="nav-text">打赏功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用LeanCloud增加Blog文章访问量功能"><span class="nav-number">2.2.</span> <span class="nav-text">用LeanCloud增加Blog文章访问量功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为博客增加评论功能"><span class="nav-number">2.3.</span> <span class="nav-text">为博客增加评论功能</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用NexT主题"><span class="nav-number">1.</span> <span class="nav-text">使用NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Next主题"><span class="nav-number">2.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-themes-next-config-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">配置/themes/next/_config.yml文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改网站底部信息"><span class="nav-number">2.1.1.</span> <span class="nav-text">修改网站底部信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单栏menu"><span class="nav-number">2.1.2.</span> <span class="nav-text">菜单栏menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题风格"><span class="nav-number">2.1.3.</span> <span class="nav-text">主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人社交信息"><span class="nav-number">2.1.4.</span> <span class="nav-text">个人社交信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站头像"><span class="nav-number">2.1.5.</span> <span class="nav-text">网站头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站动画效果"><span class="nav-number">2.1.6.</span> <span class="nav-text">网站动画效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制代码按钮"><span class="nav-number">2.1.7.</span> <span class="nav-text">复制代码按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站内搜索"><span class="nav-number">2.1.8.</span> <span class="nav-text">站内搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打赏功能"><span class="nav-number">2.1.9.</span> <span class="nav-text">打赏功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用LeanCloud增加Blog文章访问量功能"><span class="nav-number">2.2.</span> <span class="nav-text">用LeanCloud增加Blog文章访问量功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为博客增加评论功能"><span class="nav-number">2.3.</span> <span class="nav-text">为博客增加评论功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在右上角或者左上角实现fork-me-on-github"><span class="nav-number">2.4.</span> <span class="nav-text">在右上角或者左上角实现fork me on github</span></a></li></ol></li></ol></div>
             
 
           </div>
