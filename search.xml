@@ -33,7 +33,7 @@
   <entry>
     <title><![CDATA[Live2D]]></title>
     <url>%2F2019%2F03%2F27%2FLive2D%2F</url>
-    <content type="text"><![CDATA[隐藏 var message_Path = '/live2d/message.json' var home_Path = 'https://lovezhaozhen.github.io' loadlive2d("live2d", "live2d/model/tia/model.json");]]></content>
+    <content type="text"><![CDATA[隐藏 var message_Path = '/live2d/' var home_Path = 'https://lovezhaozhen.github.io' loadlive2d("live2d", "live2d/model/tia/model.json");]]></content>
   </entry>
   <entry>
     <title><![CDATA[博客配置]]></title>
