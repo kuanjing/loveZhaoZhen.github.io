@@ -421,7 +421,7 @@
                 
               
 
-              <time title="Created: 2019-03-28 13:55:05 / Modified: 17:29:09" itemprop="dateCreated datePublished" datetime="2019-03-28T13:55:05+08:00">2019-03-28</time>
+              <time title="Created: 2019-03-28 13:55:05 / Modified: 17:48:26" itemprop="dateCreated datePublished" datetime="2019-03-28T13:55:05+08:00">2019-03-28</time>
             
 
             
@@ -431,6 +431,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -473,16 +491,12 @@
       
         
           
-            <h2 id="为Blog添加live2d看板娘"><a href="#为Blog添加live2d看板娘" class="headerlink" title="为Blog添加live2d看板娘"></a>为Blog添加live2d看板娘</h2><h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><p>到github <code>branch</code><strong>Hexo</strong>下载<code>Live2D-master</code>文件</p>
-<ol>
-<li><p>复制<code>demo.html</code>中的需要的代码,<br>在<code>blog/themes/next/layout/_layout.swig</code> 查找<code>footer-inner</code><br>将刚刚的复制的代码粘贴在<br><code>&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</code>的后一行，<br><code>&lt;div class=&quot;footer-inner&quot;&gt;</code>的前一行，如下  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/live2d/css/live2d.css&quot; /&gt;</span><br><span class="line">        &lt;div id=&quot;landlord&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;message&quot; style=&quot;opacity:0&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;canvas id=&quot;live2d&quot; width=&quot;200&quot; height=&quot;300&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">            &lt;div class=&quot;hide-button&quot;&gt;隐藏&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/download.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            var message_Path = &apos;/live2d/&apos;</span><br><span class="line">            var home_Path = &apos;https://lovezhaozhen@github.io/&apos;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/live2d.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/message.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/xiaoMai/13.json&quot;);</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;footer-inner&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制<code>Live2D-master</code>文件里的<code>live2d</code>文件夹到<code>blog/themes/next/source/</code>路径中</p>
-</li>
+            <h2 id="为Blog添加live2d看板娘"><a href="#为Blog添加live2d看板娘" class="headerlink" title="为Blog添加live2d看板娘"></a>为Blog添加live2d看板娘</h2><h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><p>到github <code>branch</code><strong>Live2D</strong>下载<code>Live2D-master</code>文件<br>复制<code>demo.html</code>中的需要的代码,<br>在<code>blog/themes/next/layout/_layout.swig</code> 查找<code>footer-inner</code><br>将刚刚的复制的代码粘贴在<br><code>&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</code>的后一行，<br><code>&lt;div class=&quot;footer-inner&quot;&gt;</code>的前一行，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/live2d/css/live2d.css&quot; /&gt;</span><br><span class="line">        &lt;div id=&quot;landlord&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;message&quot; style=&quot;opacity:0&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;canvas id=&quot;live2d&quot; width=&quot;200&quot; height=&quot;300&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">            &lt;div class=&quot;hide-button&quot;&gt;隐藏&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/download.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            var message_Path = &apos;/live2d/&apos;</span><br><span class="line">            var home_Path = &apos;https://lovezhaozhen@github.io/&apos;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/live2d.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/message.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/xiaoMai/13.json&quot;);</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;footer-inner&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h3><ol>
+<li>复制<code>Live2D-master</code>文件里的<code>live2d</code>文件夹到<code>blog/themes/next/source/</code>路径中</li>
 </ol>
 <p><strong>Tips:使用hexo框架时，如果在文章中需要引用 css,js,json等文件，不能放在<code>_post</code>文件夹下，否则这些文件也会被发布，在blog中<del>莫名出现</del><code>Untitled</code>文件。</strong><br>可以将这些文件放在<code>blog/themes/next/source/</code>中,此时<code>hexo generate</code>会将该所用的主题(Next)的<code>source/</code>中的文件生成到<code>public/</code>中</p>
-<ol start="3">
+<ol start="2">
 <li><p>修改刚刚复制的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;live2d&quot; width=&quot;200&quot; height=&quot;300&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt; //修改大小</span><br><span class="line">var home_Path = &apos;https://lovezhaozhen@github.io/&apos;  //这里是博客主页Url</span><br><span class="line">loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/xiaoMai/13.json&quot;);  //这里是要用的model</span><br></pre></td></tr></table></figure>
 </li>
