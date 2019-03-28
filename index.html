@@ -376,6 +376,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://loveZhaoZhen.github.io/2019/03/28/Live2D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhao Zhen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoZhen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/28/Live2D/" class="post-title-link" itemprop="url">Live2D</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-28 13:55:05 / Modified: 17:29:09" itemprop="dateCreated datePublished" datetime="2019-03-28T13:55:05+08:00">2019-03-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/03/28/Live2D/" class="leancloud_visitors" data-flag-title="Live2D">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="为Blog添加live2d看板娘"><a href="#为Blog添加live2d看板娘" class="headerlink" title="为Blog添加live2d看板娘"></a>为Blog添加live2d看板娘</h2><h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><p>到github <code>branch</code><strong>Hexo</strong>下载<code>Live2D-master</code>文件</p>
+<ol>
+<li><p>复制<code>demo.html</code>中的需要的代码,<br>在<code>blog/themes/next/layout/_layout.swig</code> 查找<code>footer-inner</code><br>将刚刚的复制的代码粘贴在<br><code>&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</code>的后一行，<br><code>&lt;div class=&quot;footer-inner&quot;&gt;</code>的前一行，如下  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=&quot;footer&quot; class=&quot;footer&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/live2d/css/live2d.css&quot; /&gt;</span><br><span class="line">        &lt;div id=&quot;landlord&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;message&quot; style=&quot;opacity:0&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;canvas id=&quot;live2d&quot; width=&quot;200&quot; height=&quot;300&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">            &lt;div class=&quot;hide-button&quot;&gt;隐藏&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/download.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            var message_Path = &apos;/live2d/&apos;</span><br><span class="line">            var home_Path = &apos;https://lovezhaozhen@github.io/&apos;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/live2d.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/message.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/xiaoMai/13.json&quot;);</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;footer-inner&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制<code>Live2D-master</code>文件里的<code>live2d</code>文件夹到<code>blog/themes/next/source/</code>路径中</p>
+</li>
+</ol>
+<p><strong>Tips:使用hexo框架时，如果在文章中需要引用 css,js,json等文件，不能放在<code>_post</code>文件夹下，否则这些文件也会被发布，在blog中<del>莫名出现</del><code>Untitled</code>文件。</strong><br>可以将这些文件放在<code>blog/themes/next/source/</code>中,此时<code>hexo generate</code>会将该所用的主题(Next)的<code>source/</code>中的文件生成到<code>public/</code>中</p>
+<ol start="3">
+<li><p>修改刚刚复制的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;live2d&quot; width=&quot;200&quot; height=&quot;300&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt; //修改大小</span><br><span class="line">var home_Path = &apos;https://lovezhaozhen@github.io/&apos;  //这里是博客主页Url</span><br><span class="line">loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/xiaoMai/13.json&quot;);  //这里是要用的model</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>/live2d/css/live2d.css</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#landlord &#123;</span><br><span class="line">    user-select: none;</span><br><span class="line">    position: fixed;</span><br><span class="line">    left: 30px;    //与页面左边框的距离</span><br><span class="line">    bottom: 0;     //与页面右边框的距离</span><br><span class="line">    width: 200px;  //width与height应与_layout.swig </span><br><span class="line">    height: 300px; //中的&lt;canvas  width=&quot;200&quot; height=&quot;300&quot;&gt;相同</span><br><span class="line">    z-index: 10000;</span><br><span class="line">    font-size: 0;</span><br><span class="line">    transition: all .3s ease-in-out;</span><br><span class="line"></span><br><span class="line">.message &#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">    width: 220px; //修改message宽度</span><br><span class="line">    height: auto;</span><br><span class="line">    margin: auto;</span><br><span class="line">    padding: 7px;</span><br><span class="line">    top: -50px;   //与小埋图片的距离</span><br><span class="line">    left: -10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>/live2d/model/xiaoMai/13.json</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;layout&quot;:</span><br><span class="line">&#123;</span><br><span class="line">	&quot;width&quot;:1.8,     //修改图片大小(宽度)，高度自动适应</span><br><span class="line">	&quot;center_x&quot;:-0.0507,  //图片在 canvas中</span><br><span class="line">	&quot;center_y&quot;:0.45     //的相对位置</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>blog/themes/next/source/live2d/message.json</code> 修改点击后出现的message<br><strong>Tips:在修改live2d大小、位置时，可以在chrome中右键，Inspect,直接修改合适后再更改配置文件</strong></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://loveZhaoZhen.github.io/2019/03/21/BlogSetting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -438,7 +617,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-27 21:52:06" itemprop="dateModified" datetime="2019-03-27T21:52:06+08:00">2019-03-27</time>
+                <time title="Modified: 2019-03-28 17:39:33" itemprop="dateModified" datetime="2019-03-28T17:39:33+08:00">2019-03-28</time>
               
             
           </span>
@@ -1353,7 +1532,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1453,6 +1632,24 @@
     </main>
 
     <footer id="footer" class="footer">
+
+      <link rel="stylesheet" href="/live2d/css/live2d.css">
+      <div id="landlord">
+          <div class="message" style="opacity:0"></div>
+          <canvas id="live2d" width="200" height="300" class="live2d"></canvas>
+          <div class="hide-button">隐藏</div>
+      </div>
+      <script type="text/javascript" src="/live2d/js/download.js"></script>
+      <script type="text/javascript">
+          var message_Path = '/live2d/'
+          var home_Path = 'https://lovezhaozhen@github.io/'
+      </script>
+      <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+      <script type="text/javascript" src="/live2d/js/message.js"></script>
+      <script type="text/javascript">
+          loadlive2d("live2d", "/live2d/model/xiaoMai/13.json");
+      </script>
+        
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
