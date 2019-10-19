@@ -97,17 +97,18 @@
 
 
 
-  <meta name="description" content="title: arch包管理date: 2019-10-19 15:26:56categories: linux系统tags:  linux   官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs p">
+  <meta name="description" content="官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZhaoZhen&#39;s Blog">
+<meta property="og:title" content="arch包管理">
 <meta property="og:url" content="https://loveZhaoZhen.github.io/2019/10/19/yayDeb/index.html">
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
-<meta property="og:description" content="title: arch包管理date: 2019-10-19 15:26:56categories: linux系统tags:  linux   官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs p">
+<meta property="og:description" content="官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-19T08:05:47.051Z">
+<meta property="og:updated_time" content="2019-10-19T08:14:31.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZhaoZhen&#39;s Blog">
-<meta name="twitter:description" content="title: arch包管理date: 2019-10-19 15:26:56categories: linux系统tags:  linux   官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs p">
+<meta name="twitter:title" content="arch包管理">
+<meta name="twitter:description" content="官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title> | ZhaoZhen's Blog</title>
+  <title>arch包管理 | ZhaoZhen's Blog</title>
   
 
 
@@ -388,7 +389,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">arch包管理
 
               
             
@@ -414,7 +415,7 @@
                 
               
 
-              <time title="Created: 2019-10-19 15:26:56 / Modified: 16:05:47" itemprop="dateCreated datePublished" datetime="2019-10-19T15:26:56+08:00">2019-10-19</time>
+              <time title="Created: 2019-10-19 15:26:56 / Modified: 16:14:31" itemprop="dateCreated datePublished" datetime="2019-10-19T15:26:56+08:00">2019-10-19</time>
             
 
             
@@ -424,6 +425,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux系统/" itemprop="url" rel="index"><span itemprop="name">linux系统</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -453,13 +472,7 @@
       
 
       
-        <hr>
-<p>title: arch包管理<br>date: 2019-10-19 15:26:56<br>categories: linux系统<br>tags:</p>
-<ul>
-<li>linux</li>
-</ul>
-<hr>
-<h2 id="官方库中的包"><a href="#官方库中的包" class="headerlink" title="官方库中的包"></a>官方库中的包</h2><p>pacman<br>下载并安装<br><code>sudo pacman -S packageName</code><br>安装已下载的文件包<br><code>sudo pacman -U packageName</code><br>查询<br><code>sudo pacman -Qs packageName</code><br>删除<br><code>sudo pacman -Rs packageName</code></p>
+        <h2 id="官方库中的包"><a href="#官方库中的包" class="headerlink" title="官方库中的包"></a>官方库中的包</h2><p>pacman<br>下载并安装<br><code>sudo pacman -S packageName</code><br>安装已下载的文件包<br><code>sudo pacman -U packageName</code><br>查询<br><code>sudo pacman -Qs packageName</code><br>删除<br><code>sudo pacman -Rs packageName</code></p>
 <h2 id="AUR中的包"><a href="#AUR中的包" class="headerlink" title="AUR中的包"></a>AUR中的包</h2><p>使用 yay 工具<br><code>yay -S packageName</code><br>Tips：如果yay下载不了包可以尝试手动下载deb文件到<br> ~/.cache/yay/<em>packageName</em>/ 文件夹中<br>再重新执行 <code>yay -S packageName</code>命令</p>
 
       
@@ -492,6 +505,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
       
 
       

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[arch包管理]]></title>
     <url>%2F2019%2F10%2F19%2FyayDeb%2F</url>
-    <content type="text"><![CDATA[title: arch包管理date: 2019-10-19 15:26:56categories: linux系统tags: linux 官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到 ~/.cache/yay/packageName/ 文件夹中再重新执行 yay -S packageName命令]]></content>
+    <content type="text"><![CDATA[官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到 ~/.cache/yay/packageName/ 文件夹中再重新执行 yay -S packageName命令]]></content>
+      <categories>
+        <category>linux系统</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Live2D]]></title>
