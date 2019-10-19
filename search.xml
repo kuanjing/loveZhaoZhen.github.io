@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Arch语言设置]]></title>
+    <title><![CDATA[Arch系统语言设置]]></title>
     <url>%2F2019%2F10%2F19%2FlinuxLANG%2F</url>
     <content type="text"><![CDATA[根据这篇文章进行Archlinux系统中文配置:Archlinux官方中文化指导) 个人最终设置:12345/etc/locale.gen:en_US.UTF-8 UTF-8 zh_CN.UTF-8 UTF-8zh_HK.UTF-8 UTF-8zh_TW.UTF-8 UTF-8 12/etc/locale.conf:LANG=en_US.UTF-8 用locale命令查看结果：12345678910111213141516zhaozhen@Love&gt; localeLANG=en_US.UTF-8LC_CTYPE=&quot;en_US.UTF-8&quot;LC_NUMERIC=&quot;en_US.UTF-8&quot;LC_TIME=&quot;en_US.UTF-8&quot;LC_COLLATE=&quot;en_US.UTF-8&quot;LC_MONETARY=&quot;en_US.UTF-8&quot;LC_MESSAGES=&quot;en_US.UTF-8&quot;LC_PAPER=&quot;en_US.UTF-8&quot;LC_NAME=&quot;en_US.UTF-8&quot;LC_ADDRESS=&quot;en_US.UTF-8&quot;LC_TELEPHONE=&quot;en_US.UTF-8&quot;LC_MEASUREMENT=&quot;en_US.UTF-8&quot;LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;LC_ALL= 12345678zhaozhen@Love&gt; locale -aCen_US.utf8POSIXzh_CN.utf8zh_HK.utf8zh_TW.utf8 12345zhaozhen@Love&gt; localectlSystem Locale: LANG=en_US.UTF-8 VC Keymap: n/a X11 Layout: n/a 查看安装的字体:123456zhaozhen@Love ~/S/blog&gt; /usr/share/fonts/zhaozhen@Love /u/s/fonts&gt; ls100dpi/ cyrillic/ misc/ wenquanyi/75dpi/ droid/ noto/adobe-source-code-pro/ encodings/ TTF/cantarell/ kanjistrokeorders/ util/ 遇到一个问题：配置好能显示中文后，系统默认设置是英文，而且能正常输入显示中文，大多数时间都正常。但是konsole会返回中文如运行 sudo pacman 、 yay 等命令时,终端输出的都是中文而且只有在图形界面plasma上会返回中文，在其他tty下都正常是全英文 解决过程 检查上述locale.gen等配置文件都没有发现问题 检查/etc/bash.bashrc,～/.bash_profile ,~/.bashrc等等bash的配置文件也没有关于文字方面的其他配置 想找konsole的配置文件但是没有找到 查arch wiki Locale(英文版，中文翻译的版本没有翻译出问题的这一部分) 词条中有以下内容： My system is still using wrong language It is possible that the environment variables are redefined in other files than locale.conf, for example ~/.pam_environment. If you are using a desktop environment, such as GNOME, its language settings may be overriding the settings in locale.conf. 划重点(之前安装的是KDE Plasma) KDE Plasma also allows to change the UI’s language through the system settings. If the desktop environment is still using the default language after the modification, deleting the file at ~/.config/plasma-localerc (previously: ~/.config/plasma-locale-settings.sh) should resolve the issue. 于是查看这两个文件如下： 1234zhaozhen@Love&gt; vim ~/.config/plasma-locale-settings.shexport LANG=en_US.UTF-8export LANGUAGE=en_US:zh_CN 123456zhaozhen@Love&gt; vim ~/.config/plasma-localerc[Formats]LANG=en_US.UTF-8[Translations]LANGUAGE=en_US:zh_CN 找到问题了！是当初装系统在这里的设置出了问题,修改这两个文件就解决了问题]]></content>
+      <categories>
+        <category>linux系统</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[arch包管理]]></title>
@@ -39,9 +45,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[archlinux终端配置]]></title>
+    <title><![CDATA[archlinux终端Konsole配置]]></title>
     <url>%2F2019%2F03%2F20%2FkonsoleSetting%2F</url>
-    <content type="text"><![CDATA[默认进入纯英文环境在 ～/.zshrc 中加入 export LANG=C 设置透明]]></content>
+    <content type="text"><![CDATA[默认进入纯英文环境在 ～/.bashrc 中加入 export LANG=C但是这样会出现问题，例如：在这种情况下如果在终端用编辑器vim打开中文文件会出现乱码等等。在另一篇文章Arch系统语言设置中已经把终端的文字设置成与系统一样的了，现在不需要再这样设置bashrc了 设置透明]]></content>
       <categories>
         <category>linux系统</category>
       </categories>
