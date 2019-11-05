@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Archlinux下多SSH的管理]]></title>
     <url>%2F2019%2F11%2F05%2Fmuti-SSH%2F</url>
-    <content type="text"><![CDATA[SSH多秘钥github huaweicloud 配置两个不同的SSH KEY 进入~/.ssh 生成两个ssh key: 12ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot; 分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中 创建config文件 vim ~/.ssh/config添加以下内容 12345678910#githubHost github.comHostName github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsa#huaweicloudHost codehub.devcloud.huaweicloud.comHostName codehub.devcloud.huaweicloud.comPreferredAuthentications publickeyIdentityFile ~/.ssh/huaweicloud_id_rsa 测试 12ssh -T git@github.comssh -T git@codehub.devcloud.huaweicloud.com]]></content>
+    <content type="text"><![CDATA[SSH多秘钥github huaweicloud 配置两个不同的SSH KEY 进入~/.ssh 生成两个ssh key: 12ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot; 分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中 创建config文件 vim ~/.ssh/config添加以下内容 1234567891011#githubHost github #关键词 HostName github.com #主机地址 #PreferredAuthentications publickey #User git #用户名 #Port 22 #端口 IdentityFile ~/.ssh/github_id_rsa #认证文件#huaweicloudHost codehub HostName codehub.devcloud.huaweicloud.com IdentityFile ~/.ssh/huaweicloud_id_rsa 测试 12ssh -T git@github.comssh -T git@codehub.devcloud.huaweicloud.com]]></content>
       <categories>
         <category>linux系统</category>
       </categories>

@@ -413,7 +413,7 @@
                 
               
 
-              <time title="Created: 2019-11-05 20:36:50 / Modified: 20:51:21" itemprop="dateCreated datePublished" datetime="2019-11-05T20:36:50+08:00">2019-11-05</time>
+              <time title="Created: 2019-11-05 20:36:50 / Modified: 21:03:57" itemprop="dateCreated datePublished" datetime="2019-11-05T20:36:50+08:00">2019-11-05</time>
             
 
             
@@ -481,7 +481,7 @@
 <li><p>分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中</p>
 </li>
 <li><p>创建config文件 <code>vim ~/.ssh/config</code><br>添加以下内容</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">#huaweicloud</span><br><span class="line">Host codehub.devcloud.huaweicloud.com</span><br><span class="line">HostName codehub.devcloud.huaweicloud.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/huaweicloud_id_rsa</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">Host github    #关键词</span><br><span class="line">    HostName github.com  #主机地址</span><br><span class="line">    #PreferredAuthentications publickey</span><br><span class="line">    #User git  #用户名</span><br><span class="line">    #Port 22    #端口</span><br><span class="line">    IdentityFile ~/.ssh/github_id_rsa #认证文件</span><br><span class="line">#huaweicloud</span><br><span class="line">Host codehub</span><br><span class="line">    HostName codehub.devcloud.huaweicloud.com</span><br><span class="line">    IdentityFile ~/.ssh/huaweicloud_id_rsa</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@codehub.devcloud.huaweicloud.com</span><br></pre></td></tr></table></figure></li>
