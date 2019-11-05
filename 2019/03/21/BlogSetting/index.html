@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-19T08:22:09.928Z">
+<meta property="og:updated_time" content="2019-11-05T13:47:07.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客配置">
 <meta name="twitter:description" content="使用NexT主题 进入themes目录git clone https://github.com/theme-next/hexo-theme-next.git next/ 设置主题打开配置文件_config.yml找到theme修改为：themes: next">
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-19 16:22:09" itemprop="dateModified" datetime="2019-10-19T16:22:09+08:00">2019-10-19</time>
+                <time title="Modified: 2019-11-05 21:47:07" itemprop="dateModified" datetime="2019-11-05T21:47:07+08:00">2019-11-05</time>
               
             
           </span>
@@ -493,7 +493,7 @@
 <li>在github上新建一个<code>branch</code><strong>Hexo</strong></li>
 <li>在blog根目录安装插件<code>npm install hexo-git-backup --save</code></li>
 <li><p>在根目录下<code>_config.yml</code>文件结尾添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 同步部署</span><br><span class="line">backup:</span><br><span class="line">  type: git</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:loveZhaoZhen/loveZhaoZhen.github.io.git,Hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 同步部署</span><br><span class="line">backup:</span><br><span class="line">  type: git</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:&lt;&lt;username&gt;&gt;/</span><br><span class="line">    &lt;&lt;username&gt;&gt;.github.io.git,Hexo</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进行同步部署 <code>hexo b(backup)</code><br>Tips:</p>
 <blockquote>
@@ -509,7 +509,7 @@
 <h4 id="菜单栏menu"><a href="#菜单栏menu" class="headerlink" title="菜单栏menu"></a>菜单栏menu</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  #about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br></pre></td></tr></table></figure>
 <h4 id="主题风格"><a href="#主题风格" class="headerlink" title="主题风格"></a>主题风格</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
 <p>这里选择<code>Pisces</code></p>
-<h4 id="个人社交信息"><a href="#个人社交信息" class="headerlink" title="个人社交信息"></a>个人社交信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  E-Mail: https://love.zhaozhen@gmail.com || envelope  (tip:前面必须加上网络协议)</span><br></pre></td></tr></table></figure>
+<h4 id="个人社交信息"><a href="#个人社交信息" class="headerlink" title="个人社交信息"></a>个人社交信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  E-Mail: https://&lt;&lt;useremail&gt;&gt; || envelope  (tip:前面必须加上网络协议)</span><br></pre></td></tr></table></figure>
 <h4 id="网站头像"><a href="#网站头像" class="headerlink" title="网站头像"></a>网站头像</h4><p><code>avatar:</code></p>
 <h4 id="网站动画效果"><a href="#网站动画效果" class="headerlink" title="网站动画效果"></a>网站动画效果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: true</span><br></pre></td></tr></table></figure>
 <p>选择一个动画效果，不止有如下选择，但只能同时选择一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">canvas_nest: true</span><br><span class="line">three_waves: false</span><br><span class="line">canvas_lines: false</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure></p>
@@ -529,7 +529,7 @@
 <ul>
 <li>进入控制台，创建应用（名称随意，可以更改）</li>
 <li>点击应用右上角的齿轮图标（设置） –&gt;存储 –&gt;创建class (此处<code>class name 必须是</code> <code>Counter</code>)，权限可设为所有用户</li>
-<li>在安全中心添加Web安全域名, 如<code>https://lovezhaozhen.github.io/</code></li>
+<li>在安全中心添加Web安全域名, 如<code>https://&lt;&lt;username&gt;&gt;.github.io/</code></li>
 <li>找到 应用key 复制AppID 与 AppKey</li>
 <li><p>打开<code>next</code>的配置文件<code>themes/next/_config.yml</code><br>  找到</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">    enable: true</span><br><span class="line">    app_id: </span><br><span class="line">    app_key: </span><br><span class="line">    security: true</span><br><span class="line">    betterPerformance: false</span><br></pre></td></tr></table></figure>
@@ -547,7 +547,7 @@
 <li><p>打开blog配置文件<code>_config.yml</code>  </p>
 <ul>
 <li>将之前添加的 <code>&lt;&lt;username&gt;&gt;和&lt;&lt;password&gt;&gt;</code>替换为 刚设置的用户名密码(密码是纯数字需要加上双引号（表明是字符串），此用户名和密码将在hexo部署时使用。</li>
-<li>在deploy下增加<code>type:              leancloud_counter_security_sync</code><br>  如下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">repo: git@github.com:loveZhaoZhen/loveZhaoZhen.github.io.git</span><br><span class="line">branch: master</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
+<li>在deploy下增加<code>type:              leancloud_counter_security_sync</code><br>  如下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">repo: git@github.com:&lt;&lt;username&gt;&gt;/&lt;&lt;username&gt;&gt;.github.io.git</span><br><span class="line">branch: master</span><br><span class="line">- type: leancloud_counter_security_sync</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -581,7 +581,7 @@
 <h3 id="在右上角或者左上角实现fork-me-on-github"><a href="#在右上角或者左上角实现fork-me-on-github" class="headerlink" title="在右上角或者左上角实现fork me on github"></a>在右上角或者左上角实现fork me on github</h3><ul>
 <li>打开链接选择样式，复制该样式代码<br><a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">样式1</a><br><a href="https://github.blog/2008-12-19-github-ribbons/" target="_blank" rel="noopener">样式2</a></li>
 <li>然后粘贴刚才复制的代码到<code>themes/next/layout/_layout.swig</code>文件中(放在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>的下面)</li>
-<li>把href改为你的github地址<br>如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;&#123;&#123; container_class &#125;&#125; &#123;% block page_class %&#125;&#123;% endblock %&#125;&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;https://github.com/loveZhaoZhen&quot; (修改此处)</span><br><span class="line">class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;</span><br><span class="line">......</span><br><span class="line">.octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;header id=&quot;header&quot; class=&quot;header&quot; itemscope itemtype=&quot;http://schema.org/WPHeader&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;header-inner&quot;&gt;&#123;% include &apos;_partials/header/index.swig&apos; %&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br></pre></td></tr></table></figure>
+<li>把href改为你的github地址<br>如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;&#123;&#123; container_class &#125;&#125; &#123;% block page_class %&#125;&#123;% endblock %&#125;&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;https://github.com/&lt;&lt;username&gt;&gt;&quot; (修改此处)</span><br><span class="line">class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;</span><br><span class="line">......</span><br><span class="line">.octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;header id=&quot;header&quot; class=&quot;header&quot; itemscope itemtype=&quot;http://schema.org/WPHeader&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;header-inner&quot;&gt;&#123;% include &apos;_partials/header/index.swig&apos; %&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a></p>
@@ -831,6 +831,7 @@
 
     <footer id="footer" class="footer">
 
+      { #
       <link rel="stylesheet" href="/live2d/css/live2d.css">
       <div id="landlord">
           <div class="message" style="opacity:0"></div>
@@ -847,7 +848,9 @@
       <script type="text/javascript">
           loadlive2d("live2d", "/live2d/model/xiaoMai/13.json");
       </script>
-        
+       # }
+
+
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">

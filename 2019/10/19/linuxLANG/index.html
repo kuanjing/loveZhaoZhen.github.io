@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
 <meta property="og:description" content="根据这篇文章进行Archlinux系统中文配置:Archlinux官方中文化指导) 个人最终设置:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-19T14:17:55.727Z">
+<meta property="og:updated_time" content="2019-11-05T14:20:05.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arch系统语言设置">
 <meta name="twitter:description" content="根据这篇文章进行Archlinux系统中文配置:Archlinux官方中文化指导) 个人最终设置:">
@@ -415,12 +415,24 @@
                 
               
 
-              <time title="Created: 2019-10-19 21:12:43 / Modified: 22:17:55" itemprop="dateCreated datePublished" datetime="2019-10-19T21:12:43+08:00">2019-10-19</time>
+              <time title="Created: 2019-10-19 21:12:43" itemprop="dateCreated datePublished" datetime="2019-10-19T21:12:43+08:00">2019-10-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-11-05 22:20:05" itemprop="dateModified" datetime="2019-11-05T22:20:05+08:00">2019-11-05</time>
               
             
           </span>
@@ -475,10 +487,10 @@
         <h2 id="根据这篇文章进行Archlinux系统中文配置"><a href="#根据这篇文章进行Archlinux系统中文配置" class="headerlink" title="根据这篇文章进行Archlinux系统中文配置:"></a>根据这篇文章进行Archlinux系统中文配置:</h2><p><a href="https://wiki.archlinux.org/index.php/Localization/Simplified_Chinese_(简体中文" target="_blank" rel="noopener">Archlinux官方中文化指导</a>)</p>
 <p>个人最终设置:<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/etc/locale.gen:</span><br><span class="line">en_US.UTF-8 UTF-8  </span><br><span class="line">zh_CN.UTF-8 UTF-8</span><br><span class="line">zh_HK.UTF-8 UTF-8</span><br><span class="line">zh_TW.UTF-8 UTF-8</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/locale.conf:</span><br><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure>
-<p>用locale命令查看结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love&gt; locale</span><br><span class="line"></span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line">LC_CTYPE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_NUMERIC=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_TIME=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_COLLATE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MONETARY=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MESSAGES=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_PAPER=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_NAME=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ADDRESS=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_TELEPHONE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MEASUREMENT=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL=</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love&gt; locale -a</span><br><span class="line"></span><br><span class="line">C</span><br><span class="line">en_US.utf8</span><br><span class="line">POSIX</span><br><span class="line">zh_CN.utf8</span><br><span class="line">zh_HK.utf8</span><br><span class="line">zh_TW.utf8</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love&gt; localectl</span><br><span class="line"></span><br><span class="line">System Locale: LANG=en_US.UTF-8</span><br><span class="line">       VC Keymap: n/a</span><br><span class="line">      X11 Layout: n/a</span><br></pre></td></tr></table></figure>
-<p>查看安装的字体:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love ~/S/blog&gt; /usr/share/fonts/</span><br><span class="line">zhaozhen@Love /u/s/fonts&gt; ls</span><br><span class="line">100dpi/                 cyrillic/           misc/  wenquanyi/</span><br><span class="line">75dpi/                  droid/              noto/</span><br><span class="line">adobe-source-code-pro/  encodings/          TTF/</span><br><span class="line">cantarell/              kanjistrokeorders/  util/</span><br></pre></td></tr></table></figure></p>
+<p>用locale命令查看结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@Love&gt; locale</span><br><span class="line"></span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line">LC_CTYPE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_NUMERIC=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_TIME=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_COLLATE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MONETARY=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MESSAGES=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_PAPER=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_NAME=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ADDRESS=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_TELEPHONE=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_MEASUREMENT=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_IDENTIFICATION=&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL=</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Love&gt; locale -a</span><br><span class="line"></span><br><span class="line">C</span><br><span class="line">en_US.utf8</span><br><span class="line">POSIX</span><br><span class="line">zh_CN.utf8</span><br><span class="line">zh_HK.utf8</span><br><span class="line">zh_TW.utf8</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Love&gt; localectl</span><br><span class="line"></span><br><span class="line">System Locale: LANG=en_US.UTF-8</span><br><span class="line">       VC Keymap: n/a</span><br><span class="line">      X11 Layout: n/a</span><br></pre></td></tr></table></figure>
+<p>查看安装的字体:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Love ~/S/blog&gt; /usr/share/fonts/</span><br><span class="line">@Love /u/s/fonts&gt; ls</span><br><span class="line">100dpi/                 cyrillic/           misc/  wenquanyi/</span><br><span class="line">75dpi/                  droid/              noto/</span><br><span class="line">adobe-source-code-pro/  encodings/          TTF/</span><br><span class="line">cantarell/              kanjistrokeorders/  util/</span><br></pre></td></tr></table></figure></p>
 <h3 id="遇到一个问题："><a href="#遇到一个问题：" class="headerlink" title="遇到一个问题："></a>遇到一个问题：</h3><p>配置好能显示中文后，系统默认设置是英文，而且能正常输入显示中文，大多数时间都正常。<br>但是konsole会返回中文<br>如运行 <em>sudo pacman 、 yay</em> 等命令时,终端输出的都是中文<br>而且只有在图形界面plasma上会返回中文，在其他tty下都正常是全英文</p>
 <h4 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h4><ul>
 <li>检查上述locale.gen等配置文件都没有发现问题</li>
@@ -494,8 +506,8 @@
 <p>KDE Plasma also allows to change the UI’s language through the system settings. If the desktop environment is still using the default language after the modification, deleting the file at ~/.config/plasma-localerc (previously: ~/.config/plasma-locale-settings.sh) should resolve the issue.</p>
 </blockquote>
 <p>  于是查看这两个文件如下：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love&gt; vim ~/.config/plasma-locale-settings.sh</span><br><span class="line"></span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LANGUAGE=en_US:zh_CN</span><br></pre></td></tr></table></figure>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">zhaozhen@Love&gt; vim ~/.config/plasma-localerc</span><br><span class="line"></span><br><span class="line">[Formats]</span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line">[Translations]</span><br><span class="line">LANGUAGE=en_US:zh_CN</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Love&gt; vim ~/.config/plasma-locale-settings.sh</span><br><span class="line"></span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line">export LANGUAGE=en_US:zh_CN</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Love&gt; vim ~/.config/plasma-localerc</span><br><span class="line"></span><br><span class="line">[Formats]</span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line">[Translations]</span><br><span class="line">LANGUAGE=en_US:zh_CN</span><br></pre></td></tr></table></figure>
 <p>  找到问题了！是当初装系统在这里的设置出了问题,修改这两个文件就解决了问题</p>
 </li>
 </ul>
@@ -745,6 +757,7 @@
 
     <footer id="footer" class="footer">
 
+      { #
       <link rel="stylesheet" href="/live2d/css/live2d.css">
       <div id="landlord">
           <div class="message" style="opacity:0"></div>
@@ -761,7 +774,9 @@
       <script type="text/javascript">
           loadlive2d("live2d", "/live2d/model/xiaoMai/13.json");
       </script>
-        
+       # }
+
+
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
