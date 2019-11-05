@@ -413,12 +413,24 @@
                 
               
 
-              <time title="Created: 2019-11-05 20:36:50 / Modified: 21:03:57" itemprop="dateCreated datePublished" datetime="2019-11-05T20:36:50+08:00">2019-11-05</time>
+              <time title="Created: 2019-11-05 20:36:50" itemprop="dateCreated datePublished" datetime="2019-11-05T20:36:50+08:00">2019-11-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-11-06 06:19:55" itemprop="dateModified" datetime="2019-11-06T06:19:55+08:00">2019-11-06</time>
               
             
           </span>
@@ -471,23 +483,21 @@
 
       
         
-          
-            <h2 id="SSH多秘钥"><a href="#SSH多秘钥" class="headerlink" title="SSH多秘钥"></a>SSH多秘钥</h2><p>github huaweicloud 配置两个不同的SSH KEY</p>
+          <p>示例：github huaweicloud 配置两个不同的SSH KEY</p>
 <ul>
 <li>进入~/.ssh</li>
-<li><p>生成两个ssh key:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot;</span><br></pre></td></tr></table></figure>
+<li>生成两个ssh key:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中</p>
-</li>
-<li><p>创建config文件 <code>vim ~/.ssh/config</code><br>添加以下内容</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">Host github    #关键词</span><br><span class="line">    HostName github.com  #主机地址</span><br><span class="line">    #PreferredAuthentications publickey</span><br><span class="line">    #User git  #用户名</span><br><span class="line">    #Port 22    #端口</span><br><span class="line">    IdentityFile ~/.ssh/github_id_rsa #认证文件</span><br><span class="line">#huaweicloud</span><br><span class="line">Host codehub</span><br><span class="line">    HostName codehub.devcloud.huaweicloud.com</span><br><span class="line">    IdentityFile ~/.ssh/huaweicloud_id_rsa</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@codehub.devcloud.huaweicloud.com</span><br></pre></td></tr></table></figure></li>
 </ul>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/05/muti-SSH/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2106,24 +2116,7 @@
 
     <footer id="footer" class="footer">
 
-      { #
-      <link rel="stylesheet" href="/live2d/css/live2d.css">
-      <div id="landlord">
-          <div class="message" style="opacity:0"></div>
-          <canvas id="live2d" width="200" height="300" class="live2d"></canvas>
-          <div class="hide-button">隐藏</div>
-      </div>
-      <script type="text/javascript" src="/live2d/js/download.js"></script>
-      <script type="text/javascript">
-          var message_Path = '/live2d/'
-          var home_Path = 'https://lovezhaozhen@github.io/'
-      </script>
-      <script type="text/javascript" src="/live2d/js/live2d.js"></script>
-      <script type="text/javascript" src="/live2d/js/message.js"></script>
-      <script type="text/javascript">
-          loadlive2d("live2d", "/live2d/model/xiaoMai/13.json");
-      </script>
-       # }
+      
 
 
       <div class="footer-inner">
