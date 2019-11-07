@@ -97,25 +97,24 @@
 
 
 
-  <meta name="description" content="示例：github huaweicloud 配置两个不同的SSH KEY  进入~/.ssh 生成两个ssh key:  12ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;github_id_rsa&amp;quot;ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;huawei">
-<meta name="keywords" content="linux">
+  <meta name="description" content="安装插件”C/C++” “Code Runner”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Archlinux下多SSH的管理">
-<meta property="og:url" content="https://loveZhaoZhen.github.io/2019/11/05/muti-SSH/index.html">
+<meta property="og:title" content="vscode编译调试c语言">
+<meta property="og:url" content="https://loveZhaoZhen.github.io/2019/11/07/vscodeDebug/index.html">
 <meta property="og:site_name" content="ZhaoZhen&#39;s Blog">
-<meta property="og:description" content="示例：github huaweicloud 配置两个不同的SSH KEY  进入~/.ssh 生成两个ssh key:  12ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;github_id_rsa&amp;quot;ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;huawei">
+<meta property="og:description" content="安装插件”C/C++” “Code Runner”">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T22:19:55.344Z">
+<meta property="og:updated_time" content="2019-11-07T14:52:57.383Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Archlinux下多SSH的管理">
-<meta name="twitter:description" content="示例：github huaweicloud 配置两个不同的SSH KEY  进入~/.ssh 生成两个ssh key:  12ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;github_id_rsa&amp;quot;ssh-keygen -t rsa -C &amp;quot;&amp;lt;email&amp;gt;&amp;quot; -f &amp;quot;huawei">
+<meta name="twitter:title" content="vscode编译调试c语言">
+<meta name="twitter:description" content="安装插件”C/C++” “Code Runner”">
 
 
 
 
 
 
-  <link rel="canonical" href="https://loveZhaoZhen.github.io/2019/11/05/muti-SSH/">
+  <link rel="canonical" href="https://loveZhaoZhen.github.io/2019/11/07/vscodeDebug/">
 
 
 
@@ -125,7 +124,7 @@
   };
 </script>
 
-  <title>Archlinux下多SSH的管理 | ZhaoZhen's Blog</title>
+  <title>vscode编译调试c语言 | ZhaoZhen's Blog</title>
   
 
 
@@ -372,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://loveZhaoZhen.github.io/2019/11/05/muti-SSH/">
+    <link itemprop="mainEntityOfPage" href="https://loveZhaoZhen.github.io/2019/11/07/vscodeDebug/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhao Zhen">
@@ -389,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Archlinux下多SSH的管理
+          <h1 class="post-title" itemprop="name headline">vscode编译调试c语言
 
               
             
@@ -415,46 +414,16 @@
                 
               
 
-              <time title="Created: 2019-11-05 20:36:50" itemprop="dateCreated datePublished" datetime="2019-11-05T20:36:50+08:00">2019-11-05</time>
+              <time title="Created: 2019-11-07 20:47:52 / Modified: 22:52:57" itemprop="dateCreated datePublished" datetime="2019-11-07T20:47:52+08:00">2019-11-07</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-11-06 06:19:55" itemprop="dateModified" datetime="2019-11-06T06:19:55+08:00">2019-11-06</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux系统/" itemprop="url" rel="index"><span itemprop="name">linux系统</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -484,20 +453,13 @@
       
 
       
-        <p>示例：github huaweicloud 配置两个不同的SSH KEY</p>
-<ul>
-<li>进入~/.ssh</li>
-<li>生成两个ssh key:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li>分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中</li>
-<li><p>创建config文件 <code>vim ~/.ssh/config</code><br>添加以下内容</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">Host github    #关键词</span><br><span class="line">    HostName github.com  #主机地址</span><br><span class="line">    #PreferredAuthentications publickey</span><br><span class="line">    #User git  #用户名</span><br><span class="line">    #Port 22    #端口</span><br><span class="line">    IdentityFile ~/.ssh/github_id_rsa #认证文件</span><br><span class="line">#huaweicloud</span><br><span class="line">Host codehub</span><br><span class="line">    HostName codehub.devcloud.huaweicloud.com</span><br><span class="line">    IdentityFile ~/.ssh/huaweicloud_id_rsa</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@codehub.devcloud.huaweicloud.com</span><br></pre></td></tr></table></figure></li>
+        <ul>
+<li>安装插件”C/C++” “Code Runner”<a id="more"></a></li>
+<li>创建一个文件夹作为工作路径</li>
+<li>用vscode打开该文件夹（必须是文件夹，打开单个文件不能调试）</li>
+<li>在File-&gt;Preferences-&gt;settings-&gt;User-&gt;Extensions-&gt;Run Code configuration里勾上”Run In Terminal”</li>
+<li>新建一个helloWorld.c文件，随意设一个断点</li>
+<li>在debug里按调试会新建一个launch.json文件（在.vscode隐藏文件夹里） 接着会提示创建一个task.json文件，此时已经能够进行运行及调试了（有其他需求可以看着改这两个文件）</li>
 </ul>
 
       
@@ -531,12 +493,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-        </div>
-      
 
       
       
@@ -546,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/19/linuxLANG/" rel="next" title="Arch系统语言设置">
-                <i class="fa fa-chevron-left"></i> Arch系统语言设置
+              <a href="/2019/11/05/muti-SSH/" rel="next" title="Archlinux下多SSH的管理">
+                <i class="fa fa-chevron-left"></i> Archlinux下多SSH的管理
               </a>
             
           </div>
@@ -555,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/07/vscodeDebug/" rel="prev" title="vscode编译调试c语言">
-                vscode编译调试c语言 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

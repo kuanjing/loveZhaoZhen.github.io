@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vscode编译调试c语言]]></title>
+    <url>%2F2019%2F11%2F07%2FvscodeDebug%2F</url>
+    <content type="text"><![CDATA[安装插件”C/C++” “Code Runner” 创建一个文件夹作为工作路径 用vscode打开该文件夹（必须是文件夹，打开单个文件不能调试） 在File-&gt;Preferences-&gt;settings-&gt;User-&gt;Extensions-&gt;Run Code configuration里勾上”Run In Terminal” 新建一个helloWorld.c文件，随意设一个断点 在debug里按调试会新建一个launch.json文件（在.vscode隐藏文件夹里） 接着会提示创建一个task.json文件，此时已经能够进行运行及调试了（有其他需求可以看着改这两个文件）]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Archlinux下多SSH的管理]]></title>
     <url>%2F2019%2F11%2F05%2Fmuti-SSH%2F</url>
     <content type="text"><![CDATA[示例：github huaweicloud 配置两个不同的SSH KEY 进入~/.ssh 生成两个ssh key: 12ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;github_id_rsa&quot;ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot; -f &quot;huaweicloud_id_rsa&quot; 分别把生成各自的 *rsa.pub中的内容添加到github与huaweicloud中的ssh中 创建config文件 vim ~/.ssh/config添加以下内容 1234567891011#githubHost github #关键词 HostName github.com #主机地址 #PreferredAuthentications publickey #User git #用户名 #Port 22 #端口 IdentityFile ~/.ssh/github_id_rsa #认证文件#huaweicloudHost codehub HostName codehub.devcloud.huaweicloud.com IdentityFile ~/.ssh/huaweicloud_id_rsa 测试 12ssh -T git@github.comssh -T git@codehub.devcloud.huaweicloud.com]]></content>
