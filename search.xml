@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Archlinux下安装使用Mariadb]]></title>
+    <url>%2F2019%2F11%2F16%2FMariadb%2F</url>
+    <content type="text"><![CDATA[安装MariadbMariaDB(Arch官方wiki)流程总结： sudo pacman -S mariadb mariadb-libs 安装之后必须先执行 sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql sudo systemctl start mariadb.service sudo systemctl enable mariadb.service 根据提示从下面这个命令启动数据库级别的安全配置助手，来配置一些必要的安全选项：sudo mysql_secure_installation sudo ysql_upgrade -u root -p 配置首先以root账号登录你的MySQL服务器：mysql -p -u root (tips: 若忘记root账号的密码，可以用sudo mysql -p -u root，用本机用户获取root权限的密码来代替) 添加新用户以下是创建一个密码为’newUserPassword’的’newUser’用户的示例,并赋予 testDataBase(database)完全操作权限：(tips：只有在root用户赋予newUser用户相应的database的权限之后，ewUser才能对该database操作， 赋予权限时database可以是还没有创建的，之后可以用newUser创建，若newUser没有被赋予权限则只能由root用户创建)12345MariaDB&gt; CREATE USER &apos;newUser&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;newUsersPassword&apos;;MariaDB&gt; GRANT ALL PRIVILEGES ON testDataBase.* TO &apos;newUserName&apos;@&apos;localhost&apos;;MariaDB&gt; FLUSH PRIVILEGES;MariaDB&gt; quit 为数据库使用 UTF-8 编码在 /etc/my.cnf 的 mysqld 下, 添加:12345[mysqld]init_connect = &apos;SET collation_connection = utf8_general_ci,NAMES utf8&apos;collation_server = utf8_general_cicharacter_set_client = utf8character_set_server = utf8 简单使用1234567891011121314151617181920212223242526272829303132root用户：CREATE USER &apos;newUser&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;newUsersPassword&apos;; //创建用户GRANT ALL PRIVILEGES ON databaseName* TO &apos;newUserName&apos;@&apos;localhost&apos;; //赋予用户对databaseName的所有操作权限revoke all privileges on databaseName.* from userName@&apos;localhost&apos;; //收回权限drop user userName@&apos;%&apos;; //删除用户所有用户：show grants; //查看被赋予的权限show databases; //查看当前用户所拥有权限所有的数据库show tables; //查看数据表create database datebaseName //创建数据库DROP DATABASE Database_name; //删除数据库//创建数据表:首先切换数据库：use databaseName ；然后创建表：create table tableName(列名1,列名2);（tips：列名1和列名2之间用逗号&quot;,&quot;隔开，不能有空格）示例：MariaDB[(test)] &gt; create table perso(name char(10) not null,birth date);或者MariaDB[(test)] &gt; create table person-&gt; (-&gt; name char(10) not null,-&gt; birth date-&gt;);]]></content>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vscode编译调试c语言]]></title>
     <url>%2F2019%2F11%2F07%2FvscodeDebug%2F</url>
     <content type="text"><![CDATA[安装插件”C/C++” “Code Runner” 创建一个文件夹作为工作路径 用vscode打开该文件夹（必须是文件夹，只打开单个文件不能调试） 在File-&gt;Preferences-&gt;settings-&gt;User-&gt;Extensions-&gt;Run Code configuration里勾上”Run In Terminal” 新建一个helloWorld.c文件，随意设一个断点 在debug里按调试会新建一个launch.json文件（在.vscode隐藏文件夹里） 接着会提示创建一个task.json文件，此时已经能够进行运行及调试了（有其他需求可以看着改这两个文件）]]></content>
