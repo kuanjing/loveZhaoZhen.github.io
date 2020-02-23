@@ -49,7 +49,7 @@
   <entry>
     <title><![CDATA[arch包管理]]></title>
     <url>%2F2019%2F10%2F19%2FyayDeb%2F</url>
-    <content type="text"><![CDATA[官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到 ~/.cache/yay/packageName/ 文件夹中再重新执行 yay -S packageName命令 清理软件包缓存pacman 将下载的软件包保存在 /var/cache/pacman/pkg/ 并且不会自动移除旧的和未安装版本的软件包，因此需要手动清理 使用内建选项即可清除未安装软件包的缓存：# pacman -Sc这样仅会保留软件包的当前有效版本 使用专门的脚本去处理清理哪些、清理多少缓存： pacman-contrib 提供的 paccache 命令默认会删除近3个版本前的软件包# paccache -r 也可以自己设置保留最近几个版本：# paccache -rk 1 清理所有未安装包的缓存文件，再此运行paccache:# paccache -ruk0 更多功能参见 paccache -h]]></content>
+    <content type="text"><![CDATA[官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName AUR中的包使用 yay 工具yay -S packageNameTips：如果yay下载不了包可以尝试手动下载deb文件到 ~/.cache/yay/packageName/ 文件夹中再重新执行 yay -S packageName命令 清理软件包缓存pacman 将下载的软件包保存在 /var/cache/pacman/pkg/ 并且不会自动移除旧的和未安装版本的软件包，因此需要手动清理 使用内建选项即可清除未安装软件包的缓存：# pacman -Sc这样仅会保留软件包的当前有效版本 使用专门的脚本去处理清理哪些、清理多少缓存： pacman-contrib 提供的 paccache 命令默认会删除近3个版本前的软件包# paccache -r 也可以自己设置保留最近几个版本：# paccache -rk 1 清理所有未安装包的缓存文件，再此运行paccache:# paccache -ruk0 更多功能参见 paccache -h yay 安装的AUR库中的软件在/opt文件夹里 删除软件之后KRunner还保留着删除前的记录，但是打不开该软件，删除~/.local/share/applications中的对应文件即可]]></content>
       <categories>
         <category>linux系统</category>
       </categories>
