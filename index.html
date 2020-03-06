@@ -413,7 +413,7 @@
                 
               
 
-              <time title="Created: 2020-03-06 12:41:14 / Modified: 14:53:36" itemprop="dateCreated datePublished" datetime="2020-03-06T12:41:14+08:00">2020-03-06</time>
+              <time title="Created: 2020-03-06 12:41:14 / Modified: 15:16:15" itemprop="dateCreated datePublished" datetime="2020-03-06T12:41:14+08:00">2020-03-06</time>
             
 
             
@@ -453,112 +453,24 @@
 
       
         
-          
-            <p><a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank" rel="noopener">官方Installation_guide</a></p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
+          <p><a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank" rel="noopener">官方Installation_guide</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
 <li>到 <a href="https://www.archlinux.org/download/" target="_blank" rel="noopener">Arch官网</a>下载iso文件</li>
 <li>制作U盘启动盘</li>
 <li>在windows或者linux上腾出一块空闲的空间 </li>
-<li>进入bios选择U盘启动</li>
-</ul>
-<ol>
-<li><code>ls /sys/firmware/efi/efivars</code> 查看引导方式， 如果该文件夹不存在则是BIOS引导，否则是UEFI引导</li>
-<li><code>dhcpcd</code> 或者 <code>wifi-menu</code>联网（<code>ping archlinux.org</code> 确认是否连接成功）</li>
-<li><p><code>timedatectl set-ntp true</code> 更新系统时间</p>
-<h3 id="创建分区格式化磁盘"><a href="#创建分区格式化磁盘" class="headerlink" title="创建分区格式化磁盘"></a>创建分区格式化磁盘</h3><p>查看安装的磁盘信息<br><code>fdisk -l</code></p>
-<h4 id="创建分区表"><a href="#创建分区表" class="headerlink" title="创建分区表"></a>创建分区表</h4><p>输入 fdisk /dev/sd<strong><em>X</em></strong> (酌情填入相应X) 操作相应磁盘 </p>
-</li>
-</ol>
-<ul>
-<li>按 <em>g</em> 创建gtp分区表（<em>o</em>创建mbr分区表）</li>
-<li>按 <em>n</em> 创建新分区  <ul>
-<li>创建引导分区：起始扇区默认 结束扇区可填入 +512M创建一个 512M 的引导分区,按t更改分区类型，按ef更改为EFI类型（有引导分区不用创建这个分区）</li>
-<li>创建根分区 结束扇区可填入 +<em>X</em>M/G 来创建一个<strong><em>X</em></strong>M/G 的分区</li>
-</ul>
-</li>
-<li>按p查看创建的分区是否有误</li>
-<li>按w将之前的操作写入磁盘（使之生效）<h4 id="格式化磁盘"><a href="#格式化磁盘" class="headerlink" title="格式化磁盘"></a>格式化磁盘</h4></li>
-</ul>
-<ol>
-<li>mkfs.fat -F32 /dev/sd<strong><em>Xy</em></strong> 将<strong>引导分区</strong>格式化为fat格式</li>
-<li>mkfs.ext4 /dev/sd<strong><em>Xy</em></strong> 将<strong>根分区</strong>格式化为ext4格式</li>
-</ol>
-<h3 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h3><p>mount /dev/sd<strong><em>Xy</em></strong> /mnt 将<strong>根分区</strong>挂载到 /mnt</p>
-<p>mkdir /mnt/boot<br>mount /dev/sd<strong><em>Xy</em></strong> /mnt/boot 将<strong>引导分区</strong>挂载到 /mnt/boot</p>
-<h3 id="安装Arch"><a href="#安装Arch" class="headerlink" title="安装Arch"></a>安装Arch</h3><ol>
-<li><code>vim /etc/pacman.d/mirrorlist</code> 选择镜像源 (将China的源剪切到最上面，最后<code>:wq</code>保存)</li>
-<li><code>pacstrap /mnt base base-devel linux linux-firmware dhcpcd</code> 安装 essential packages</li>
-<li><code>genfstab -L /mnt &gt;&gt; /mnt/etc/fstab</code> 创建fstab文件</li>
-<li><code>cat /mnt/etc/fstab</code> 检查fstab是否有问题</li>
-<li><code>arch-chroot /mnt</code> 进入新系统，之后都是对新安装在磁盘上的系统的操作</li>
-<li><p>设置时区  </p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line">hwclock --systohc</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-<li><p><code>pacman -S vim networkmanager wpa_supplicant dialog</code> 安装一些工具</p>
-</li>
-<li><code>vim /etc/locale.gen</code> 取消<code>en_US.UTF-8 UTF-8`</code>zh_CN-UTF-8 UTF -8<code></code>zh_TW.UTF-8 UTF-8<code></code>zh_HK.UTF-8 UTF-8`的注释</li>
-<li><code>locale-gen</code></li>
-<li><code>vim /etc/locale.conf</code> 写入<code>LANG=en_US.UTF-8</code></li>
-<li><code>vim /etc/hostname</code> 填入 <strong><em>myhostname</em></strong>(自己取个主机名)</li>
-<li><code>vim /etc/hosts</code>  如下填写：<br>127.0.0.1　　　　localhost<br>::1　　　　　　　localhost<br>127.0.1.1　　　　<strong><em>myhostname</em></strong>.lolocaldomain  <strong><em>myhostname</em></strong></li>
-<li><code>psswd</code> 设置root密码<h4 id="Boot-loader"><a href="#Boot-loader" class="headerlink" title="Boot loader"></a>Boot loader</h4></li>
-<li><code>pacman -S intel-ucode</code>（intel处理器）或者<code>pacman -S amd-ucode</code>（AMD处理器)</li>
-<li><code>pacman -S os-prober ntfs-3g</code> 这两个包可以配合grub检测已经存在的系统</li>
-<li><code>pacman -S grub efibootmgr</code></li>
-<li><code>grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</code></li>
-<li><code>grub-mkconfig -o /boot/grub/grub.cfg</code> 自动生成GRUB配置文件</li>
-<li><code>vim /boot/grub/grub.cfg</code> 检查其中<code>menuentry</code>部分是否有问题<h4 id="Reboot"><a href="#Reboot" class="headerlink" title="Reboot"></a>Reboot</h4></li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br><span class="line">umount /mnt/boot</span><br><span class="line">umount /mnt</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p>tips:<br>Optionally manually unmount all the partitions with <code>umount -R /mnt</code>: this allows noticing any “busy” partitions</p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4></li>
-<li>重启后<code>dhcpcd</code> 或者<code>wifi-menu</code>重新联网</li>
-<li>新建用户：<ul>
-<li>useradd -m -G wheel <strong><em>username</em></strong> 自己起个用户名</li>
-<li>passwd <strong><em>username</em></strong> 设置密码</li>
-</ul>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pacman -S sudo</span><br><span class="line">visudo</span><br><span class="line">去掉# %wheel ALL=(ALL)ALL 前面的注释#号并保存退出</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">创建交换文件</span><br><span class="line">fallocate -l 512M /swapfile (可将512M替换为所需大小)</span><br><span class="line">chmod 600 /swapfile</span><br><span class="line">mkswap /swapfile</span><br><span class="line">swapon /swapfile</span><br><span class="line">vim /etc/fstab 在最后一行加入： </span><br><span class="line">/swapfile none swap defaults 0 0</span><br><span class="line">注意不要修改该文件前面的内容</span><br></pre></td></tr></table></figure>
-<p><a href="https://wiki.archlinux.org/index.php/Swap#Swap_file" target="_blank" rel="noopener">关于swapfile的详情</a></p>
-</li>
-<li><p><code>reboot</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">关于14-18步的详细资料:</span><br><span class="line">First, install the packages grub and efibootmgr: GRUB is the bootloader while efibootmgr is used by the GRUB installation script to write boot entries to NVRAM.</span><br><span class="line"></span><br><span class="line">Then follow the below steps to install GRUB:</span><br><span class="line"></span><br><span class="line">  1. Mount the EFI system partition and in the remainder of this section, substitute esp with its mount point.</span><br><span class="line">  2. Choose a bootloader identifier, here named GRUB. A directory of that name will be created in esp/EFI/ to store the EFI binary and this is the name that will appear in the UEFI boot menu to identify the GRUB boot entry.</span><br><span class="line">  3.Execute the following command to install the GRUB EFI application grubx64.efi to esp/EFI/GRUB/ and install its modules to /boot/grub/x86_64-efi/.</span><br><span class="line"># grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB</span><br><span class="line"></span><br><span class="line">GRUB</span><br><span class="line">grub-mkconfig will automatically detect the microcode update and configure GRUB appropriately. After installing the microcode package, regenerate the GRUB config to activate loading the microcode update by running:</span><br><span class="line"></span><br><span class="line"># grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h3><ol>
-<li>安装显卡驱动(Driver)<br> <a href="https://wiki.archlinux.org/index.php/Xorg#Driver_installation" target="_blank" rel="noopener">查看详细驱动版本</a><br> 如果是intel集成显卡:<br> <code>sudo pacman -S xf86-video-intel</code></li>
-<li><code>sudo pacman -S xorg</code></li>
-<li><code>sudo pacman -S plasma kde-applications</code></li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S sddm</span><br><span class="line">sudo systemctl enable sddm  设置开机自启动 sddm</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable netctl 取消自启动 netctl</span><br><span class="line">sudo systemctl enable NetworkManager</span><br><span class="line">sudo pacman -S network-manager-applet</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字体和输入法</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ttf-dejavu</span><br><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx fxitx-im</span><br></pre></td></tr></table></figure>
-<p> <a href="https://wiki.archlinux.org/index.php/fcitx#Chinese" target="_blank" rel="noopener">再选择一个输入法装上</a></p>
-</li>
-</ol>
-<h3 id="好用的安装包"><a href="#好用的安装包" class="headerlink" title="好用的安装包"></a>好用的安装包</h3><ol>
-<li><p>yay</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://aur.archlinux.org/yay.git</span><br><span class="line">cd yay</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>rsync<br> 可用rsync备份系统<br> sudo rsync -aAXv –delete –exclude={“/dev/<em>“,”/proc/</em>“,”/sys/<em>“,”/tmp/</em>“,”/run/<em>“,”/mnt/</em>“,”/media/*”,”/lost+found”,”swapfile”} /  /目的地</p>
-</li>
-<li><p>screen<br> screen -S <strong><em>session</em></strong><br> screen -ls<br> screen -r <strong><em>session</em></strong>  reattach<br> 在session内:<br> ctrl+a, d　　　　Detach<br> ctrl+a, S(大写) 　上下分屏<br> ctrl+a, |　　　　左右分屏<br> ctrl+a, tab　　 　切换分屏<br> ctrl+a, c　　　　在新创建的启动bash<br> ctrl+a, X(大写)　删除当前分屏</p>
-</li>
-<li><p>stardict 需要去网上下载相关词库文件</p>
-</li>
-<li>fish<br> <code>vim ~/.bashrc</code> 在最后加入exec fish<br> 在启动bash的时候自动启动fish<br> 如需要切换回bush，输入 bash –norc （不执行~/.bashrc文件)</li>
-<li>vlc 视频播放器</li>
-<li>libreoffice</li>
-</ol>
-
+<li>进入bios选择U盘启动
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/03/06/InstallArch/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
 
     
 
