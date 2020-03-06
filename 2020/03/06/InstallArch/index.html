@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Nattmara&#39;s Blog">
 <meta property="og:description" content="安装Archlinux官方Installation_guide 下载 到 Arch官网下载iso文件 制作U盘启动盘 在windows或者linux上腾出一块空闲的空间  进入bios选择U盘启动">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-06T10:23:02.439Z">
+<meta property="og:updated_time" content="2020-03-06T10:30:37.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装Archlinux(UEFI引导+GPT分区)">
 <meta name="twitter:description" content="安装Archlinux官方Installation_guide 下载 到 Arch官网下载iso文件 制作U盘启动盘 在windows或者linux上腾出一块空闲的空间  进入bios选择U盘启动">
@@ -415,7 +415,7 @@
                 
               
 
-              <time title="Created: 2020-03-06 12:41:14 / Modified: 18:23:02" itemprop="dateCreated datePublished" datetime="2020-03-06T12:41:14+08:00">2020-03-06</time>
+              <time title="Created: 2020-03-06 12:41:14 / Modified: 18:30:37" itemprop="dateCreated datePublished" datetime="2020-03-06T12:41:14+08:00">2020-03-06</time>
             
 
             
@@ -533,13 +533,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable netctl 取消自启动 netctl</span><br><span class="line">sudo systemctl enable NetworkManager</span><br><span class="line">sudo pacman -S network-manager-applet</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>字体和输入法</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ttf-dejavu</span><br><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx fxitx-im</span><br></pre></td></tr></table></figure>
-<p> <a href="https://wiki.archlinux.org/index.php/fcitx#Chinese" target="_blank" rel="noopener">再选择一个输入法装上</a></p>
+<ul>
+<li><p>字体  </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ttf-dejavu</span><br><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>sudo pacman -S fcitx fxitx-im</code></p>
+</li>
+<li><a href="https://wiki.archlinux.org/index.php/fcitx#Chinese" target="_blank" rel="noopener">再选择一个输入法装上</a></li>
+</ul>
 </li>
 </ol>
 <h1 id="备份与恢复系统"><a href="#备份与恢复系统" class="headerlink" title="备份与恢复系统"></a>备份与恢复系统</h1><p>可用rsync完整备份系统  </p>
-<h2 id="备份：-必须用linux文件系统的存储，NFTS格式会出问题"><a href="#备份：-必须用linux文件系统的存储，NFTS格式会出问题" class="headerlink" title="备份：  (必须用linux文件系统的存储，NFTS格式会出问题)"></a>备份：  (必须用linux文件系统的存储，NFTS格式会出问题)</h2><p><code>sudo rsync -aAXv --delete --exclude={&quot;/dev/*&quot;,&quot;/proc/*&quot;,&quot;/sys/*&quot;,&quot;/tmp/*&quot;,&quot;/run/*&quot;,&quot;/mnt/*&quot;,&quot;/media/*&quot;,&quot;/lost+found&quot;,&quot;swapfile&quot;} /  /挂载的外部存储/</code>  </p>
+<h2 id="备份：-必须用linux文件系统的存储，NFTS格式会出问题"><a href="#备份：-必须用linux文件系统的存储，NFTS格式会出问题" class="headerlink" title="备份：  (必须用linux文件系统的存储，NFTS格式会出问题)"></a>备份：  (必须用linux文件系统的存储，NFTS格式会出问题)</h2><p><code>sudo rsync -aAXv --delete --exclude={&quot;/dev/*&quot;,&quot;/proc/*&quot;,&quot;/sys/*&quot;,&quot;/tmp/*&quot;,&quot;/run/*&quot;,&quot;/mnt/*&quot;,&quot;/media/*&quot;,&quot;/lost+found&quot;,&quot;swapfile&quot;} /  /挂载的外部存储/</code></p>
 <h2 id="恢复："><a href="#恢复：" class="headerlink" title="恢复："></a>恢复：</h2><ol>
 <li>在镜像里挂载存储备份的盘和将要装入系统的磁盘挂载上去<br>　　mount /dev/sd<strong><em>Xy</em></strong> /backup 装备份的盘<br>　　mount /dev/sd<strong><em>Zw</em></strong> /mnt  将要装系统的盘<br>　　mount /dev/sd<strong><em>Pq</em></strong> /mnt/boot 新系统的引导盘  </li>
 <li><code>rsync -aAXv --delete --exclude={&quot;lost+found&quot;} /backup/* /mnt</code>  (注意/backup/<em> 后面的</em>不能漏掉,否则会创建一个backup文件夹在根目录导致系统启动不了)</li>
@@ -570,7 +575,7 @@
 <li>vlc 视频播放器</li>
 <li>libreoffice 办公</li>
 </ol>
-<h1 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h1><p><code>fdisk -l</code><br><code>lsblk</code><br><code>df -h</code><br><code>du -sh</code><br><code>cat /proc/cpuinfo</code></p>
+<h1 id="记录一些经常用的命令"><a href="#记录一些经常用的命令" class="headerlink" title="记录一些经常用的命令"></a>记录一些经常用的命令</h1><p><code>fdisk -l</code><br><code>lsblk</code><br><code>df -h</code><br><code>du -sh</code><br><code>cat /proc/cpuinfo</code></p>
 
       
     </div>
@@ -794,7 +799,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Archlinux"><span class="nav-number">1.</span> <span class="nav-text">安装Archlinux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建分区并格式化磁盘"><span class="nav-number">1.2.</span> <span class="nav-text">创建分区并格式化磁盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分区表"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化磁盘"><span class="nav-number">1.2.2.</span> <span class="nav-text">格式化磁盘</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载分区"><span class="nav-number">1.3.</span> <span class="nav-text">挂载分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Arch到磁盘上"><span class="nav-number">1.4.</span> <span class="nav-text">安装Arch到磁盘上</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载及基本配置"><span class="nav-number">1.4.1.</span> <span class="nav-text">下载及基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Boot-loader"><span class="nav-number">1.4.2.</span> <span class="nav-text">设置Boot loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建议配置"><span class="nav-number">1.4.3.</span> <span class="nav-text">建议配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形界面"><span class="nav-number">1.4.4.</span> <span class="nav-text">图形界面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#备份与恢复系统"><span class="nav-number">2.</span> <span class="nav-text">备份与恢复系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#备份：-必须用linux文件系统的存储，NFTS格式会出问题"><span class="nav-number">2.1.</span> <span class="nav-text">备份：  (必须用linux文件系统的存储，NFTS格式会出问题)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复："><span class="nav-number">2.2.</span> <span class="nav-text">恢复：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#好用的安装包"><span class="nav-number">3.</span> <span class="nav-text">好用的安装包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关命令"><span class="nav-number">4.</span> <span class="nav-text">相关命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Archlinux"><span class="nav-number">1.</span> <span class="nav-text">安装Archlinux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建分区并格式化磁盘"><span class="nav-number">1.2.</span> <span class="nav-text">创建分区并格式化磁盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分区表"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化磁盘"><span class="nav-number">1.2.2.</span> <span class="nav-text">格式化磁盘</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载分区"><span class="nav-number">1.3.</span> <span class="nav-text">挂载分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Arch到磁盘上"><span class="nav-number">1.4.</span> <span class="nav-text">安装Arch到磁盘上</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载及基本配置"><span class="nav-number">1.4.1.</span> <span class="nav-text">下载及基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Boot-loader"><span class="nav-number">1.4.2.</span> <span class="nav-text">设置Boot loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建议配置"><span class="nav-number">1.4.3.</span> <span class="nav-text">建议配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形界面"><span class="nav-number">1.4.4.</span> <span class="nav-text">图形界面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#备份与恢复系统"><span class="nav-number">2.</span> <span class="nav-text">备份与恢复系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#备份：-必须用linux文件系统的存储，NFTS格式会出问题"><span class="nav-number">2.1.</span> <span class="nav-text">备份：  (必须用linux文件系统的存储，NFTS格式会出问题)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复："><span class="nav-number">2.2.</span> <span class="nav-text">恢复：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#好用的安装包"><span class="nav-number">3.</span> <span class="nav-text">好用的安装包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录一些经常用的命令"><span class="nav-number">4.</span> <span class="nav-text">记录一些经常用的命令</span></a></li></ol></div>
             
 
           </div>
