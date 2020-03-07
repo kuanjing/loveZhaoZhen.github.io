@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Nattmara&#39;s Blog">
 <meta property="og:description" content="官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-23T14:07:10.951Z">
+<meta property="og:updated_time" content="2020-03-07T02:24:52.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="arch包管理">
 <meta name="twitter:description" content="官方库中的包pacman下载并安装sudo pacman -S packageName安装已下载的文件包sudo pacman -U packageName查询sudo pacman -Qs packageName删除sudo pacman -Rs packageName">
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-02-23 22:07:10" itemprop="dateModified" datetime="2020-02-23T22:07:10+08:00">2020-02-23</time>
+                <time title="Modified: 2020-03-07 10:24:52" itemprop="dateModified" datetime="2020-03-07T10:24:52+08:00">2020-03-07</time>
               
             
           </span>
@@ -484,8 +484,24 @@
       
 
       
-        <h2 id="官方库中的包"><a href="#官方库中的包" class="headerlink" title="官方库中的包"></a>官方库中的包</h2><p>pacman<br>下载并安装<br><code>sudo pacman -S packageName</code><br>安装已下载的文件包<br><code>sudo pacman -U packageName</code><br>查询<br><code>sudo pacman -Qs packageName</code><br>删除<br><code>sudo pacman -Rs packageName</code><br><a id="more"></a></p>
-<h2 id="AUR中的包"><a href="#AUR中的包" class="headerlink" title="AUR中的包"></a>AUR中的包</h2><p>使用 yay 工具<br><code>yay -S packageName</code><br>Tips：如果yay下载不了包可以尝试手动下载deb文件到<br> ~/.cache/yay/<em>packageName</em>/ 文件夹中<br>再重新执行 <code>yay -S packageName</code>命令</p>
+        <h1 id="官方库中的包"><a href="#官方库中的包" class="headerlink" title="官方库中的包"></a>官方库中的包</h1><p>pacman<br>下载并安装<br><code>sudo pacman -S packageName</code><br>安装已下载的文件包<br><code>sudo pacman -U packageName</code><br>查询<br><code>sudo pacman -Qs packageName</code><br>删除<br><code>sudo pacman -Rs packageName</code><br><a id="more"></a></p>
+<h1 id="AUR中的包"><a href="#AUR中的包" class="headerlink" title="AUR中的包"></a>AUR中的包</h1><h2 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h2><h3 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h3><ol>
+<li>安装编译和下载工具<br><code>sudo pacman -S --needed base-devel git</code></li>
+<li>开启并行编译(可选)<ul>
+<li><code>vim /etc/makepkg.conf</code></li>
+<li>找到<code># MAKEFLAGS=&quot;-j2&quot;</code>标签 取消注释#号，将-j2修改为本机处理器拥有的线程数，保存<h3 id="手动安装AUR包"><a href="#手动安装AUR包" class="headerlink" title="手动安装AUR包"></a>手动安装AUR包</h3></li>
+</ul>
+</li>
+<li>在<a href="https://aur.archlinux.org/" target="_blank" rel="noopener">AUR网站</a>上找到需要的包,并复制Git Clone URL的链接</li>
+<li>创建并进入一个专用的文件夹，并且git clone <strong><em>URL</em></strong></li>
+<li>进入clone下来的文件夹，检查PKGBUILD文件，<a href="https://wiki.archlinux.org/index.php/PKGBUILD" target="_blank" rel="noopener">详情见PKGBUILD WIKI</a></li>
+<li>在clone下来的文件夹里面<code>makepkg -si</code>开始编译</li>
+<li>等待编译完成输入密码安装程序，AUR程序一般会安装到<code>/opt</code>文件夹中</li>
+<li>安装完之后可以删除这个为下载编译创建的文件夹<h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h2><h3 id="下载安装-yay-工具"><a href="#下载安装-yay-工具" class="headerlink" title="下载安装 yay 工具"></a>下载安装 yay 工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://aur.archlinux.org/yay.git</span><br><span class="line">cd yay</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="使用-yay-工具"><a href="#使用-yay-工具" class="headerlink" title="使用 yay 工具"></a>使用 yay 工具</h3><p>查找AUR库:<br><code>yay -packageName</code><br>安装:<br><code>yay -S packageName</code><br>查找AUR库和官方库:<br><code>yay -Ss packageName</code><br>升级所有包:<br><code>yay -Sua</code><br>查看帮助:<br><code>yay -h</code><br>查看所有yay选项:<br><code>man yay</code>  </p>
+<p>Tips：如果yay下载不了包可以手动安装或者尝试手动下载deb文件到<br> ~/.cache/yay/<em>packageName</em>/ 文件夹中<br>再重新执行 <code>yay -S packageName</code>命令</p>
 <h2 id="清理软件包缓存"><a href="#清理软件包缓存" class="headerlink" title="清理软件包缓存"></a>清理软件包缓存</h2><p>pacman 将下载的软件包保存在 /var/cache/pacman/pkg/ 并且不会自动移除旧的和未安装版本的软件包，因此需要手动清理</p>
 <ul>
 <li><p>使用内建选项即可清除未安装软件包的缓存：<br><code># pacman -Sc</code><br>这样仅会保留软件包的当前有效版本</p>
@@ -732,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方库中的包"><span class="nav-number">1.</span> <span class="nav-text">官方库中的包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUR中的包"><span class="nav-number">2.</span> <span class="nav-text">AUR中的包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理软件包缓存"><span class="nav-number">3.</span> <span class="nav-text">清理软件包缓存</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#官方库中的包"><span class="nav-number">1.</span> <span class="nav-text">官方库中的包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AUR中的包"><span class="nav-number">2.</span> <span class="nav-text">AUR中的包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#手动安装"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#提前准备"><span class="nav-number">2.1.1.</span> <span class="nav-text">提前准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动安装AUR包"><span class="nav-number">2.1.2.</span> <span class="nav-text">手动安装AUR包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用工具"><span class="nav-number">2.2.</span> <span class="nav-text">使用工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装-yay-工具"><span class="nav-number">2.2.1.</span> <span class="nav-text">下载安装 yay 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-yay-工具"><span class="nav-number">2.2.2.</span> <span class="nav-text">使用 yay 工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理软件包缓存"><span class="nav-number">2.3.</span> <span class="nav-text">清理软件包缓存</span></a></li></ol></li></ol></div>
             
 
           </div>
